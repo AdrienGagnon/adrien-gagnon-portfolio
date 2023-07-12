@@ -1,0 +1,42 @@
+:root {
+    --color-red-soft-hex: #ff0000;
+    --color-red-bright-hex: #ff2700;
+    --color-white-hex: #fcffff;
+    --color-orange-hex: #ff6a05;
+    --color-grey-hex: #aaaaaa;
+
+    --color-red-soft: 255, 0, 0;
+    --color-red-bright: 255, 39, 0;
+    --color-white: 252, 255, 255;
+    --color-orange: 255, 106, 5;
+    --color-grey: 170, 170, 170;
+}
+
+[theme='dark'] {
+    --color-red-soft-hex: #0c134f;
+    --color-red-bright-hex: #1d267d;
+    --color-white-hex: #5c469c;
+    --color-orange-hex: #d4adfc;
+
+    --color-red-soft: 12, 19, 79;
+    --color-red-bright: 29, 38, 125;
+    --color-white: 92, 70, 156;
+    --color-orange: 212, 173, 252;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}

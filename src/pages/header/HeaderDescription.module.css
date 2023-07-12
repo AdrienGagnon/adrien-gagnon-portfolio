@@ -1,0 +1,35 @@
+.header-description-container {
+    display: flex;
+    position: relative;
+    margin-inline: 10rem;
+    padding-inline: 5rem;
+}
+
+.curly-braces {
+    height: 150%;
+    top: -25%;
+    position: absolute;
+    /* translate: 0% -20%; */
+}
+
+.left-brace {
+    left: 0;
+}
+
+.right-brace {
+    right: 0;
+}
+
+.header-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(var(--color-white));
+    font-size: 2rem;
+    gap: 1rem;
+    margin-inline: 5rem;
+}
+
+.anglais {
+    color: rgb(var(--color-grey));
+}

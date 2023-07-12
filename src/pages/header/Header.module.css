@@ -1,0 +1,15 @@
+@import url('../../constants/constants.css');
+
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(var(--color-red-bright));
+    padding-block: 0rem 20rem;
+    width: 100%;
+    min-height: calc(100vh + 20rem);
+}
+
+.header-fixed {
+    position: fixed;
+}

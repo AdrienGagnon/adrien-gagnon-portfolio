@@ -1,0 +1,34 @@
+.portfolio-container {
+    position: relative;
+    height: 100rem;
+    isolation: isolate;
+    z-index: 1;
+    background-color: rgb(var(--color-white));
+}
+
+.portfolio-container::before {
+    --height: 15rem;
+
+    position: absolute;
+    content: '';
+    top: calc(-1 * var(--height));
+    left: 0;
+
+    border-bottom: var(--height) solid rgb(var(--color-white));
+    border-left: 100vw solid transparent;
+    width: 0;
+    z-index: 1;
+}
+
+.portfolio-container::after {
+    --height: 17rem;
+
+    position: absolute;
+    content: '';
+    top: calc(-1 * var(--height));
+    left: 0;
+
+    border-bottom: var(--height) solid rgb(var(--color-orange));
+    border-left: 100vw solid transparent;
+    width: 0;
+}
