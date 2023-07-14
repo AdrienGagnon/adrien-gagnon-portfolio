@@ -1,0 +1,35 @@
+.description-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.description-container * {
+    text-align: left;
+}
+
+.description-container h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.description-container p {
+    font-size: 1.6rem;
+}
+
+.description-container p:nth-of-type(1) {
+    margin-bottom: 0.8rem;
+}
+
+.description-container p:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+.anglais {
+    color: rgb(var(--color-grey));
+}
+
+@media screen and (max-width: 1450px) {
+    .description-container {
+        order: 2;
+    }
+}

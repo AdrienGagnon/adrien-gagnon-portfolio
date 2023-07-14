@@ -1,0 +1,38 @@
+.contact-container {
+    background-color: rgb(var(--color-white));
+    z-index: 1;
+    position: relative;
+}
+
+.contact-container button {
+    margin-block: 3rem;
+}
+
+.form-contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    margin: 1rem 3rem;
+    font-size: 2rem;
+}
+
+.form-contact-container label {
+    text-align: end;
+    margin-block: auto;
+    margin-right: 2rem;
+}
+
+.form-contact-container input,
+.form-contact-container textarea {
+    text-align: start;
+    border: 2px solid rgb(var(--color-orange));
+    border-radius: 1rem;
+    padding: 1rem;
+    max-width: 50rem;
+}
+
+.form-contact-container input:focus,
+.form-contact-container textarea:focus {
+    outline: rgb(var(--color-red-bright)) 2px solid;
+    outline-offset: 2px;
+}

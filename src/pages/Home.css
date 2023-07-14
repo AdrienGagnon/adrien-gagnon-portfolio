@@ -1,0 +1,41 @@
+:root {
+    --color-red-soft-hex: #ff0000;
+    --color-red-bright-hex: #a00500;
+    --color-white-hex: #fcffff;
+    --color-orange-hex: #ff6a05;
+    --color-grey-hex: #aaaaaa;
+    --color-black: black;
+
+    --color-red-soft: 255, 0, 0;
+    --color-red-bright: 160, 5, 0;
+    --color-white: 252, 255, 255;
+    --color-orange: 255, 106, 5;
+    --color-grey: 170, 170, 170;
+}
+
+main[data-theme='dark'] {
+    --color-red-soft-hex: #0c134f;
+    --color-red-bright-hex: #1d267d;
+    --color-white-hex: #5c469c;
+    --color-orange-hex: #d4adfc;
+    --color-black: #fcffff;
+
+    --color-red-soft: 12, 19, 79;
+    --color-red-bright: 29, 38, 125;
+    --color-white: 92, 70, 156;
+    --color-orange: 212, 173, 252;
+}
+
+* {
+    color: rgb(var(--color-black));
+}
+
+/* html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+main > * {
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+} */

@@ -5,18 +5,24 @@
     padding-inline: 5rem;
 }
 
+.header-description-container:hover .curly-braces {
+    translate: var(--translate-brace);
+}
+
 .curly-braces {
-    height: 150%;
-    top: -25%;
+    height: 200%;
+    top: -50%;
     position: absolute;
-    /* translate: 0% -20%; */
+    transition: translate 300ms;
 }
 
 .left-brace {
+    --translate-brace: 2rem;
     left: 0;
 }
 
 .right-brace {
+    --translate-brace: -2rem;
     right: 0;
 }
 
@@ -28,6 +34,10 @@
     font-size: 2rem;
     gap: 1rem;
     margin-inline: 5rem;
+}
+
+.header-description p {
+    text-wrap: balance;
 }
 
 .anglais {

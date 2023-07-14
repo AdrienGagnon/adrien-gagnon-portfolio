@@ -28,8 +28,8 @@
     position: absolute;
     right: 0;
     top: 0;
-    transition: 0.4s;
-    border: 1px solid black;
+    transition: 300ms;
+    /* border: 1px solid black; */
 }
 
 .slider::before {
@@ -39,18 +39,11 @@
     height: 26px;
     left: 4px;
     position: absolute;
-    transition: 0.4s;
+    transition: 300ms;
     width: 26px;
 }
-input:checked {
-    border: 2px blue solid;
-}
 
-input:checked + .slider {
-    background-color: #66bb6a;
-}
-
-input:checked + .slider::before {
+[data-theme='dark'] .slider::before {
     transform: translateX(26px);
 }
 

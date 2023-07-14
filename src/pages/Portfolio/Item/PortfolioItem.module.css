@@ -1,0 +1,49 @@
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.wrapper {
+    /* max-width: 50rem; */
+    padding-inline: 1rem;
+    width: fit-content;
+    display: flex;
+}
+
+[data-layout='normal'] {
+    justify-content: right;
+    align-items: end;
+}
+
+.accordion {
+    --_button-size: 3rem;
+    --_panel-padding: 0.75rem;
+    --_panel-gap: 1rem;
+
+    display: flex;
+    gap: 1rem;
+    max-width: 100%;
+    contain: content;
+    /* added padding to prevent issue with outlines */
+    padding: 0.5rem;
+    flex-shrink: 1;
+
+    flex-direction: row;
+    height: 30rem;
+}
+
+@media (max-width: 850px) {
+    .accordion {
+        flex-direction: column;
+        width: 30rem;
+        height: fit-content;
+    }
+
+    .accordion > div {
+        width: unset;
+    }
+}
+
+.accordion * {
+    margin: 0;
+}

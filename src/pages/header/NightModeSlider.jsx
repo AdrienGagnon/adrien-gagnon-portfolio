@@ -1,16 +1,8 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { modeActions } from '../../store/nightMode-slice';
 import styles from './NightModeSlider.module.css';
 
-function NightModeSlider() {
-    const dispatch = useDispatch();
-
-    const mode = useSelector(state => {
-        return state.mode.mode;
-    });
-
+function NightModeSlider({ mode, setMode }) {
     function switchTheme() {
-        dispatch(modeActions.switchMode(mode === 'light' ? 'dark' : 'light'));
+        setMode(mode === 'light' ? 'dark' : 'light');
     }
 
     return (

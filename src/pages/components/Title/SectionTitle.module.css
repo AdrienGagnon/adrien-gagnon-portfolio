@@ -1,0 +1,36 @@
+.section-title {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.section-title p {
+    font-size: 3rem;
+}
+
+.section-separator,
+.section-separator::before {
+    width: 5px;
+}
+
+.section-separator {
+    position: relative;
+    transform: skew(-30deg) translate(10px, 1rem);
+    background-color: rgb(var(--color-grey));
+}
+
+.section-separator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    height: 100%;
+    background-color: black;
+}
+
+.anglais {
+    transform: translateY(2rem);
+    color: rgb(var(--color-grey));
+}
