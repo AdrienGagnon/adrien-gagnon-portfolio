@@ -5,7 +5,7 @@
     z-index: 1000;
     top: 1rem;
     left: 1rem;
-    z-index: 0;
+    z-index: 1;
 }
 
 .theme-slider {

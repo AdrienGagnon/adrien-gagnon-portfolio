@@ -4,10 +4,11 @@ import message from 'bundle-text:./message.txt';
 
 import './Home.css';
 import Portfolio from './Portfolio/Portfolio';
-import Header from './header/Header';
-import NightModeSlider from './header/NightModeSlider';
+import Header from './header/Content/Header';
+import NightModeSlider from './header/Nav/NightModeSlider';
 import Contact from './Contact/Contact';
-import Footer from './Footer/Footer';
+import Nav from './header/Nav/Nav';
+import SectionSelector from './header/Nav/SectionSelector';
 
 function Home() {
     const [mode, setMode] = useState('light');
@@ -28,10 +29,11 @@ function Home() {
     return (
         <main data-theme={mode}>
             <NightModeSlider mode={mode} setMode={setMode} />
+            <Nav />
+            <SectionSelector />
             <Header />
             <Portfolio />
             <Contact />
-            <Footer />
         </main>
     );
 }

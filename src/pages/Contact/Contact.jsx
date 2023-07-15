@@ -1,10 +1,24 @@
+import { useRef, useEffect } from 'react';
+import { intersectionObserver } from '../utils/intersectionObserver';
+
+import Footer from '../Footer/Footer';
 import BtnLink from '../components/Buttons/BtnLink';
 import SectionTitle from '../components/Title/SectionTitle';
 import styles from './Contact.module.css';
 
 function Contact() {
+    const contactRef = useRef();
+
+    useEffect(() => {
+        intersectionObserver(contactRef.current);
+    }, []);
+
     return (
-        <div className={styles['contact-container']}>
+        <div
+            ref={contactRef}
+            className={styles['contact-container']}
+            id="contact"
+        >
             <SectionTitle titleFr={'Me contacter'} titleEn={'Contact me'} />
             <form
                 action="https://formsubmit.co/adrien.gagnon25@outlook.com"
@@ -53,6 +67,7 @@ function Contact() {
                     options={{ type: 'submit' }}
                 />
             </form>
+            <Footer />
         </div>
     );
 }

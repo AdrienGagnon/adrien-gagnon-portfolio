@@ -35,7 +35,10 @@ main[data-theme='dark'] {
     scroll-behavior: smooth;
 }
 
-main > * {
+#header,
+#portfolio-item-1,
+#portfolio-item-2,
+#contact {
     scroll-snap-align: start;
     scroll-behavior: smooth;
 } */

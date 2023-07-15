@@ -1,5 +1,5 @@
 import styles from './HeaderTitle.module.css';
-import photoFinissant from './photo-finissant-zoom.png';
+import photoFinissant from './assets/photo-finissant-zoom.png';
 
 function HeaderTitle() {
     return (
@@ -8,7 +8,7 @@ function HeaderTitle() {
                 <img
                     className={styles['photo-finissant']}
                     src={photoFinissant}
-                    alt=""
+                    alt="photo-finissant"
                 />
             </div>
             <div>

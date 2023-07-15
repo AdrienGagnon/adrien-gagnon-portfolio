@@ -2,6 +2,7 @@
     background-color: rgb(var(--color-white));
     z-index: 1;
     position: relative;
+    min-height: 100vh;
 }
 
 .contact-container button {

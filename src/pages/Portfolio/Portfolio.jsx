@@ -1,7 +1,8 @@
 import styles from './Portfolio.module.css';
 import PortfolioItem from './Item/PortfolioItem';
 import SectionTitle from '../components/Title/SectionTitle';
-
+import { useRef, useEffect } from 'react';
+import { intersectionObserver } from '../utils/intersectionObserver';
 import playlistLogin from './assets/playlist-login.png';
 import playlistHome from './assets/playlist-home.png';
 import playlistPlaylistView from './assets/playlist-playlistView.png';
@@ -9,6 +10,14 @@ import playlistSectionView from './assets/playlist-sectionView.png';
 import PortfolioDescription from './Description/PortfolioDescription';
 
 function Portfolio() {
+    const portfolio1Ref = useRef();
+    const portfolio2Ref = useRef();
+
+    useEffect(() => {
+        intersectionObserver(portfolio1Ref.current);
+        intersectionObserver(portfolio2Ref.current);
+    }, []);
+
     const projectList = [
         {
             title: 'Project Manager',
@@ -28,15 +37,24 @@ function Portfolio() {
 
     return (
         <div className={styles['portfolio-container']}>
-            <SectionTitle titleFr={'Mes projets'} titleEn={'My latest work'} />
-            <div className={styles['portfolio-item-container']}>
-                <PortfolioItem project={projectList[0]} layout={'normal'} />
-                <PortfolioDescription
-                    project={projectList[0]}
-                    layout={'normal'}
+            <div ref={portfolio1Ref} id="portfolio-item-1">
+                <SectionTitle
+                    titleFr={'Mes projets'}
+                    titleEn={'My latest work'}
                 />
+                <div className={styles['portfolio-item-container']}>
+                    <PortfolioItem project={projectList[0]} layout={'normal'} />
+                    <PortfolioDescription
+                        project={projectList[0]}
+                        layout={'normal'}
+                    />
+                </div>
             </div>
-            <div className={styles['portfolio-item-container']}>
+            <div
+                ref={portfolio2Ref}
+                className={styles['portfolio-item-container']}
+                id="portfolio-item-2"
+            >
                 <PortfolioDescription
                     project={projectList[0]}
                     layout={'inverse'}

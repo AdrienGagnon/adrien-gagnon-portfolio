@@ -1,0 +1,63 @@
+.svg-container {
+    position: fixed;
+    width: 30px;
+    height: 100vh;
+    top: 0;
+    right: 3rem;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    isolation: isolate;
+}
+
+.svg-container svg.active {
+    rotate: 180deg;
+    border-radius: 100%;
+}
+
+.svg-container svg.active rect {
+    animation: roundIcon 300ms forwards 150ms;
+}
+
+@keyframes roundIcon {
+    to {
+        rx: 30px;
+    }
+}
+
+.svg-container a {
+    cursor: pointer;
+    height: 30px;
+}
+
+.svg-container a:hover svg {
+    scale: 1.2;
+}
+
+.svg-container svg {
+    position: sticky;
+    transition: scale 300ms, rotate 300ms;
+}
+
+.svg-container rect {
+    width: 15px;
+    height: 15px;
+}
+
+.courbe {
+    position: absolute;
+    width: 35px;
+    height: 12px; /* as the half of the width */
+    border-top-left-radius: 110px; /* 100px of height + 10px of border */
+    border-top-right-radius: 110px; /* 100px of height + 10px of border */
+    border: 3px solid rgb(var(--color-orange));
+    border-bottom: 0;
+    rotate: -90deg;
+    translate: -20px -9px;
+}
+
+.right {
+    rotate: 90deg;
+    translate: 15px -9px;
+}
