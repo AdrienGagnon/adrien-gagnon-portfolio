@@ -9,6 +9,7 @@ import NightModeSlider from './header/Nav/NightModeSlider';
 import Contact from './Contact/Contact';
 import Nav from './header/Nav/Nav';
 import SectionSelector from './header/Nav/SectionSelector';
+import Socials from './Socials/Socials';
 
 function Home() {
     const [mode, setMode] = useState('light');
@@ -30,6 +31,7 @@ function Home() {
         <main data-theme={mode}>
             <NightModeSlider mode={mode} setMode={setMode} />
             <Nav />
+            <Socials />
             <SectionSelector />
             <Header />
             <Portfolio />

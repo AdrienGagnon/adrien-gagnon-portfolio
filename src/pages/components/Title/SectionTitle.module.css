@@ -1,9 +1,13 @@
 .section-title {
     display: flex;
-    position: relative;
+    position: absolute;
     justify-content: center;
     gap: 2rem;
-    margin-bottom: 5rem;
+    margin-block: 5rem;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .section-title p {

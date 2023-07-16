@@ -1,0 +1,53 @@
+.arrow {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    bottom: 10rem;
+    left: 50%;
+    right: 50%;
+    cursor: pointer;
+    fill: rgb(var(--color-orange));
+    transition: all 300ms ease-in-out;
+}
+
+.arrow span {
+    --radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + var(--radius));
+    height: calc(100% + var(--radius));
+    translate: calc(-1 * var(--radius) / 2) calc(-1 * var(--radius) / 2);
+    border-radius: 50%;
+    opacity: 0;
+    border: 2px rgb(var(--color-orange)) solid;
+}
+
+.arrow span:nth-of-type(2) {
+    --radius: 2rem;
+    --delay: 100ms;
+}
+
+.arrow span:nth-of-type(3) {
+    --radius: 3rem;
+    --delay: 200ms;
+}
+
+.arrow:hover {
+    transform: translateY(-1rem);
+}
+
+.arrow:hover span {
+    animation: hoverBtn 1s infinite;
+    animation-delay: var(--delay);
+}
+
+@keyframes hoverBtn {
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+}

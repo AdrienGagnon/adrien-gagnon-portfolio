@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer';
 import BtnLink from '../components/Buttons/BtnLink';
 import SectionTitle from '../components/Title/SectionTitle';
 import styles from './Contact.module.css';
+import ToTop from '../components/Buttons/ToTop';
 
 function Contact() {
     const contactRef = useRef();
@@ -67,6 +68,7 @@ function Contact() {
                     options={{ type: 'submit' }}
                 />
             </form>
+            <ToTop />
             <Footer />
         </div>
     );

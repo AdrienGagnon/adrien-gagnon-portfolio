@@ -5,7 +5,7 @@ function AccordionPanel({ image, alt, number, ariaExpanded }) {
         <div
             className={[styles['accordion-panel'], 'accordion-panel'].join(' ')}
         >
-            <h2 id={`panel${number}-heading`}>
+            <h3 id={`panel${number}-heading`}>
                 <button
                     className={styles['accordion-trigger']}
                     aria-controls={`panel${number}-content`}
@@ -25,7 +25,7 @@ function AccordionPanel({ image, alt, number, ariaExpanded }) {
                         <span></span>
                     </div>
                 </button>
-            </h2>
+            </h3>
 
             <div
                 className={[

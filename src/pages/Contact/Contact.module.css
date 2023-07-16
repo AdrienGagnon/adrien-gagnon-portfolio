@@ -1,4 +1,7 @@
 .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: rgb(var(--color-white));
     z-index: 1;
     position: relative;

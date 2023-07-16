@@ -32,6 +32,7 @@ function Portfolio() {
             description_en:
                 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui tempora, recusandae quidem, praesentium ut sit provident voluptatibus reprehenderit assumenda, quasi nihil totam aliquid deleniti. Vel atque quod accusantium blanditiis quidem!',
             link: 'https://playlist-manager-ag.netlify.app',
+            tools: ['React', 'HTML', 'CSS', 'Redux', 'SpotifyAPI'],
         },
     ];
 

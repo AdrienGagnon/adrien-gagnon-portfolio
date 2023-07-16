@@ -5,8 +5,16 @@
     background-color: rgb(var(--color-white));
     padding-top: 10rem;
 }
+
 .portfolio-container > * {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.portfolio-container > div:nth-of-type(1) {
+    position: relative;
 }
 
 .portfolio-container::before {
@@ -40,7 +48,6 @@
     display: flex;
     justify-content: center;
     margin-inline: 5rem;
-    padding-bottom: 10rem;
 }
 
 @media screen and (max-width: 1450px) {

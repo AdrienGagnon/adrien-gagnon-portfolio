@@ -1,0 +1,25 @@
+.tools-container {
+    --gap-tool: 1rem;
+    display: flex;
+    font-size: 1.6rem;
+    gap: var(--gap-tool);
+}
+
+.tools-container > * {
+}
+
+.tool--name {
+    position: relative;
+}
+
+.tool--name::before {
+    content: '';
+    position: absolute;
+    left: calc(-1.5px + -1 * var(--gap-tool) / 2);
+    top: 0;
+    display: block;
+    width: 3px;
+    height: 100%;
+    background-color: rgb(var(--color-orange));
+    border-radius: 1rem;
+}
