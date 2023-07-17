@@ -32,15 +32,19 @@ img {
     height: 30rem;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 850px) or (min-width: 1450px) {
     .accordion {
         flex-direction: column;
-        width: 30rem;
-        height: fit-content;
+        height: 50rem;
     }
 
-    .accordion > div {
-        width: unset;
+    .accordion img {
+        aspect-ratio: 2;
+        width: 100%;
+    }
+
+    .wrapper {
+        max-width: 100%;
     }
 }
 

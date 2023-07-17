@@ -44,7 +44,6 @@ function HeaderDescription() {
                     ].join(' ')}
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke={color_orange_hex}
                     strokeWidth="0.5"
                     strokeLinecap="round"
                     strokeLinejoin="miter"

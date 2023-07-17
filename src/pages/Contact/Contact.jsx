@@ -49,7 +49,9 @@ function Contact() {
                         name="subject"
                         placeholder="Subject"
                     />
-                    <label htmlFor="description">Description</label>
+                    <label htmlFor="description" className={styles.description}>
+                        Description
+                    </label>
                     <textarea
                         id="description"
                         type="text"

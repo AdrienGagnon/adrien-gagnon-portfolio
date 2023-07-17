@@ -3,7 +3,7 @@
     width: 30px;
     height: 100vh;
     top: 0;
-    right: 3rem;
+    right: 2rem;
     z-index: 100;
     display: flex;
     flex-direction: column;
@@ -43,6 +43,7 @@
 .svg-container rect {
     width: 15px;
     height: 15px;
+    stroke: rgb(var(--color-orange));
 }
 
 .courbe {
@@ -54,10 +55,10 @@
     border: 3px solid rgb(var(--color-orange));
     border-bottom: 0;
     rotate: -90deg;
-    translate: -20px -9px;
+    translate: -20px -10px;
 }
 
 .right {
     rotate: 90deg;
-    translate: 15px -9px;
+    translate: 15px -10px;
 }

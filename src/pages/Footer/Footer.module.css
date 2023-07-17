@@ -23,4 +23,14 @@
 
 .social-links img {
     width: 20px;
+    opacity: 0.5;
+    transition: opacity 300ms;
+}
+
+.social-links div:hover img {
+    opacity: 1;
+}
+
+.copyright {
+    font-weight: 500;
 }

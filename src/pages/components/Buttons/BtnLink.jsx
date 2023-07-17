@@ -10,10 +10,15 @@ function BtnLink({ type = 'link', link, fr, en, options = undefined }) {
             <span className={styles['anglais']}>{en}</span>
         </>
     );
+
     return (
         <>
             {type === 'link' ? (
-                <a className={styles['description-link']} href={link}>
+                <a
+                    className={styles['description-link']}
+                    id={options?.absolute ? styles['absolute'] : ''}
+                    href={link}
+                >
                     {content}
                 </a>
             ) : (

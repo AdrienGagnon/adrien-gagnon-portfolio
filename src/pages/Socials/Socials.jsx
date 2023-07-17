@@ -7,6 +7,7 @@ import mail from './assets/mail.png';
 import { handleClickLink } from './handleClickLink';
 
 function Socials() {
+    const [mousePosition, setMousePosition] = useState();
     const [socialsVisible, setSocialsVisible] = useState(true);
 
     const socials = [
@@ -31,48 +32,29 @@ function Socials() {
     ];
 
     useEffect(() => {
-        // Initial slideOut
         setTimeout(() => {
             setSocialsVisible(false);
         }, 2000);
+        let timer = Date.now();
+        window.addEventListener('mousemove', e => handleMouseOver(e, timer));
+        return window.removeEventListener('mousemove', e =>
+            handleMouseOver(e, timer)
+        );
     }, []);
 
-    // useEffect(() => {
-    //     // After the initial slideOut, listener for when the mouse is near the left of the screen
-    //     if (socialsVisible) return;
-    //     let timer = Date.now();
-    //     window.addEventListener('mousemove', e => handleMouseOver(e, timer));
-    //     return () =>
-    //         window.removeEventListener('mousemove', e =>
-    //             handleMouseOver(e, timer)
-    //         );
-    // }, [socialsVisible]);
+    function handleMouseOver(e, timer) {
+        const now = Date.now();
+        if (now - timer < 200) return;
+        timer = now;
 
-    // function handleMouseOver(e, timer) {
-    //     const now = Date.now();
-    //     if (now - timer < 150) return;
-    //     timer = now;
-
-    //     if (e.clientX < 100 && !socialsVisible) {
-    //         setTimeout(() => {
-    //             window.addEventListener('mousemove', e => abortListener(e));
-    //         }, 2000);
-    //         setSocialsVisible(true);
-    //     }
-    // }
-
-    // function abortListener(e) {
-    //     if (e.clientX >= 100) {
-    //         setSocialsVisible(false);
-    //         window.removeEventListener('mousemove', e => abortListener(e));
-    //     }
-    // }
+        setMousePosition(e.clientX);
+    }
 
     return (
         <div
             className={[
                 styles['social-container'],
-                socialsVisible ? '' : styles['slideOut'],
+                mousePosition < 100 || socialsVisible ? '' : styles['slideOut'],
             ].join(' ')}
         >
             {socials.map(social => {

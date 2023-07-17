@@ -17,5 +17,5 @@ body {
 }
 
 main * {
-    transition: background-color 300ms, color 300ms;
+    transition: background-color 300ms, color 300ms, fill 300ms;
 }

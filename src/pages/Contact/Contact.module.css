@@ -14,7 +14,7 @@
 
 .form-contact-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     row-gap: 1rem;
     margin: 1rem 3rem;
     font-size: 2rem;
@@ -39,4 +39,8 @@
 .form-contact-container textarea:focus {
     outline: rgb(var(--color-red-bright)) 2px solid;
     outline-offset: 2px;
+}
+
+label.description {
+    margin-top: 1rem;
 }

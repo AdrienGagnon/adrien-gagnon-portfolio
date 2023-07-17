@@ -1,20 +1,24 @@
+/* SVG background */
+
 .background-container {
     position: absolute;
-    width: 100%;
-    height: 100%;
     z-index: -1;
+    width: 300px;
+    height: 300px;
 }
 
-.background-container > svg {
+.square {
     position: absolute;
+    translate: -20rem -20rem;
+    z-index: -1;
+    filter: blur(1px);
 }
 
-.background-container > svg:nth-of-type(1) {
-    top: 5rem;
-    left: 20rem;
-}
-
-.background-container > svg:nth-of-type(2) {
-    top: 40rem;
-    left: 50rem;
+.square rect {
+    height: 500px;
+    width: 500px;
+    stroke: rgb(var(--color-red-soft));
+    stroke-width: 4rem;
+    fill: none;
+    /* fill: rgb(var(--color-red-soft)); */
 }

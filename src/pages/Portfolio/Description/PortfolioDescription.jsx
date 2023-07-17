@@ -1,5 +1,4 @@
 import styles from './PortfolioDescription.module.css';
-import BtnLink from '../../components/Buttons/BtnLink';
 import Tools from './Tools';
 
 function PortfolioDescription({ project }) {
@@ -9,7 +8,6 @@ function PortfolioDescription({ project }) {
             <p>{project.description_fr}</p>
             <p className={styles['anglais']}>{project.description_en}</p>
             <Tools tools={project.tools} />
-            <BtnLink link={project.link} fr={'Visiter /'} en={'/ Visit'} />
         </div>
     );
 }

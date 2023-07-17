@@ -1,8 +1,8 @@
-import styles from './SectionSelector.module.css';
-import { toSection } from '../../utils/toSection';
 import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+import { toSection } from '../../utils/toSection';
+import styles from './SectionSelector.module.css';
 
 function SectionSelector() {
     const [activeIndex, setActiveIndex] = useState();
@@ -19,6 +19,7 @@ function SectionSelector() {
         'header',
         'portfolio-item-1',
         'portfolio-item-2',
+        'portfolio-item-3',
         'contact',
     ];
 
@@ -41,15 +42,14 @@ function SectionSelector() {
                             <rect
                                 transform="rotate(45, 15, 15), translate(7,7)"
                                 fill="none"
-                                stroke="#ff6a05"
                                 strokeWidth="3"
                             />
                         </svg>
-                        {index !== 3 && (
+                        {index !== 4 && (
                             <div
                                 className={[
                                     styles.courbe,
-                                    index === 1 && styles.right,
+                                    [1, 3].includes(index) && styles.right,
                                 ].join(' ')}
                             ></div>
                         )}

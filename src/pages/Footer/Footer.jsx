@@ -30,7 +30,7 @@ function Footer() {
                     );
                 })}
             </div>
-            <div> ©️ Adrien Gagnon 2023</div>
+            <div className={styles['copyright']}> ©️ Adrien Gagnon 2023</div>
         </footer>
     );
 }

@@ -1,12 +1,12 @@
 :root {
-    --color-red-soft-hex: #ff0000;
+    --color-red-soft-hex: #570000;
     --color-red-bright-hex: #a00500;
     --color-white-hex: #fcffff;
     --color-orange-hex: #ff6a05;
     --color-grey-hex: #aaaaaa;
     --color-black: black;
 
-    --color-red-soft: 255, 0, 0;
+    --color-red-soft: 87, 0, 0;
     --color-red-bright: 160, 5, 0;
     --color-white: 252, 255, 255;
     --color-orange: 255, 106, 5;
@@ -24,6 +24,10 @@ main[data-theme='dark'] {
     --color-red-bright: 29, 38, 125;
     --color-white: 92, 70, 156;
     --color-orange: 212, 173, 252;
+
+    --color-blue: 35, 39, 47;
+    --color-blue-bright: 52, 58, 70;
+    --color-text-blue: 20, 158, 202;
 }
 
 * {

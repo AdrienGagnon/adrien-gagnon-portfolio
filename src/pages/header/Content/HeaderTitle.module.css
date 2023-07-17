@@ -11,9 +11,9 @@
     height: 30rem;
     aspect-ratio: 1;
     border-radius: 100%;
-    border: 2px black solid;
+    border: 2px rgb(var(--color-red-soft)) solid;
     float: right;
-    box-shadow: 5px 5px 5px 1px black;
+    box-shadow: 5px 5px 5px 1px rgb(var(--color-red-soft));
 }
 
 .header-name,
@@ -36,9 +36,18 @@
     color: rgb(var(--color-grey));
 }
 
+.wrapper-photo {
+    display: flex;
+}
+
+.photo-container {
+    margin-left: auto;
+    width: fit-content;
+}
+
 /* Animation on load */
 
-@media screen and not (prefers-reduced-motion) {
+@media screen and (prefers-reduced-motion: no-preference) {
     .photo-finissant {
         opacity: 0;
         transform: translateX(-5rem);
