@@ -72,7 +72,7 @@
 
 .accordion-icon {
     fill: var(--_panel-color);
-    background: hsl(0 0% 0% / 0.55);
+    background: hsl(0 0% 0%);
     width: var(--_button-size);
     aspect-ratio: 1 / 1;
     padding: 0.3rem;

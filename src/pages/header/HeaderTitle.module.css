@@ -41,6 +41,7 @@
 }
 
 .photo-container {
+    position: relative;
     margin-left: auto;
     width: fit-content;
 }

@@ -21,6 +21,10 @@ function Contact() {
             id="contact"
         >
             <SectionTitle titleFr={'Me contacter'} titleEn={'Contact me'} />
+            <div>
+                <p></p>
+                <p></p>
+            </div>
             <form
                 action="https://formsubmit.co/adrien.gagnon25@outlook.com"
                 method="POST"

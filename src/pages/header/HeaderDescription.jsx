@@ -1,5 +1,5 @@
 import styles from './HeaderDescription.module.css';
-import { color_orange_hex } from '../../../constants/constants';
+import { color_orange_hex } from '../../constants/constants';
 
 function HeaderDescription() {
     return (

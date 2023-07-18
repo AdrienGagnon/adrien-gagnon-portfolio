@@ -1,0 +1,31 @@
+/* SVG background */
+
+.background-container {
+    --dimension: 250px;
+    --image-width: 300px;
+    position: absolute;
+    z-index: -1;
+    width: var(--image-width);
+    height: var(--image-width);
+    /* rotate: 45deg; */
+}
+
+.square {
+    /* transform: translate(
+        calc(-0.5 * var(--dimension)),
+        calc(-0.5 * var(--dimension))
+    ); */
+    z-index: -1;
+    filter: blur(1px);
+    width: calc(var(--dimension) * 2);
+    height: calc(var(--dimension) * 2);
+}
+
+.square rect {
+    height: calc(2 * var(--dimension));
+    width: calc(2 * var(--dimension));
+    stroke: rgba(var(--color-red-soft), 0.5);
+    stroke-width: 5rem;
+    fill: none;
+    /* fill: rgb(var(--color-red-soft)); */
+}

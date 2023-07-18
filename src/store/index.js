@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import modeReducer from './nightMode-slice';
+import langageReducer from './langage-slice';
 import activeSectionReducer from './activeSection-slice';
 
 const store = configureStore({
     reducer: {
-        mode: modeReducer,
+        langage: langageReducer,
         activeSection: activeSectionReducer,
     },
 });

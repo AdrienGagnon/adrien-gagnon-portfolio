@@ -20,6 +20,9 @@ button {
 #absolute {
     position: absolute;
     bottom: 10rem;
+    width: 152px;
+    left: 50%;
+    right: 50%;
 }
 
 /* .description-link::after {

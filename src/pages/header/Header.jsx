@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { intersectionObserver } from '../../utils/intersectionObserver';
+import { intersectionObserver } from '../utils/intersectionObserver';
 
 import styles from './Header.module.css';
 import HeaderDescription from './HeaderDescription';

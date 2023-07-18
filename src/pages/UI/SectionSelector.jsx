@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 
-import { toSection } from '../../utils/toSection';
+import { toSection } from '../utils/toSection';
 import styles from './SectionSelector.module.css';
 
 function SectionSelector() {

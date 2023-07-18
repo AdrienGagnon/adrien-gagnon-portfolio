@@ -8,11 +8,13 @@ img {
     padding-inline: 1rem;
     width: fit-content;
     display: flex;
+    align-items: center;
+    height: fit-content;
 }
 
 [data-layout='normal'] {
     justify-content: right;
-    align-items: end;
+    /* align-items: end; */
 }
 
 .accordion {

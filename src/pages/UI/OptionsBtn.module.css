@@ -1,0 +1,35 @@
+.sliders-container {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 150;
+    cursor: pointer;
+    padding: 1rem 1rem;
+}
+
+.sliders-container.visible {
+    background: rgb(var(--color-red-soft-hex));
+    border: rgb(var(--color-red-soft-hex)) 2px solid;
+}
+
+.menu-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: end;
+}
+
+.menu-lines span {
+    height: 4px;
+    width: 30px;
+    border-radius: 4px;
+    background-color: rgb(var(--color-orange));
+}
+
+.menu-lines span:nth-child(2) {
+    width: 20px;
+}
+
+.menu-lines span:nth-child(3) {
+    width: 15px;
+}
