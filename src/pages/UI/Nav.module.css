@@ -6,13 +6,14 @@
     color: rgb(var(--color-orange));
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
     display: flex;
     justify-content: center;
     margin-top: 2rem;
 }
 
 .nav a {
+    color: rgb(var(--color-orange));
     cursor: pointer;
     position: relative;
 }

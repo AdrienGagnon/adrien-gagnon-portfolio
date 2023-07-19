@@ -9,7 +9,7 @@ function OptionsBtn({ mode, setMode }) {
         <div
             className={[
                 styles['sliders-container'],
-                visible ? styles['visible'] : '',
+                visible ? styles['active'] : '',
             ].join(' ')}
         >
             <div
@@ -20,7 +20,7 @@ function OptionsBtn({ mode, setMode }) {
                 <span></span>
                 <span></span>
             </div>
-            {visible && <Sliders mode={mode} setMode={setMode} />}
+            <Sliders mode={mode} setMode={setMode} />
         </div>
     );
 }

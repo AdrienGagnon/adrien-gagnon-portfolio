@@ -1,7 +1,12 @@
 import styles from './HeaderDescription.module.css';
 import { color_orange_hex } from '../../constants/constants';
+import { useSelector } from 'react-redux';
 
 function HeaderDescription() {
+    const langage = useSelector(state => {
+        return state.langage.langage;
+    });
+
     return (
         <div className={styles['header-description-container']}>
             <div className={styles['header-description']}>
@@ -27,16 +32,20 @@ function HeaderDescription() {
                         <path d="M9,3H8A3,3,0,0,0,5,6V9a3,3,0,0,1-3,3H2a3,3,0,0,1,3,3v4a3,3,0,0,0,3,3H9"></path>
                     </g>
                 </svg>
-                <p>
-                    Programmeur Front-End motivé par le développement de sites
-                    modernes, élégants et réactifs. Travailleur créatif,
-                    autonome et assidu avec un intérêt d'apprendre.
-                </p>
-                <p className={styles['anglais']}>
-                    Front-End programmer motivated by the development of modern,
-                    elegant and responsive websites. Creative worker, autonomous
-                    and hard working with a lifelong interest in learning.
-                </p>
+                {langage === 'fr' ? (
+                    <p className={styles['header-description-text']}>
+                        Programmeur Front-End motivé par le développement de
+                        sites modernes, élégants et réactifs. Travailleur
+                        créatif, autonome et assidu avec un intérêt d'apprendre.
+                    </p>
+                ) : (
+                    <p className={styles['header-description-text']}>
+                        Front-End programmer motivated by the development of
+                        modern, elegant and responsive websites. Creative
+                        worker, autonomous and hard working with a lifelong
+                        interest in learning.
+                    </p>
+                )}
                 <svg
                     className={[
                         styles['curly-braces'],

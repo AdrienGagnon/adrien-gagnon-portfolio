@@ -21,8 +21,8 @@ button {
     position: absolute;
     bottom: 10rem;
     width: 152px;
-    left: 50%;
-    right: 50%;
+    left: calc(50% - 76px);
+    right: calc(50% - 76px);
 }
 
 /* .description-link::after {

@@ -1,7 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialLangage = {
-    langage: window.navigator.language ? window.navigator.language : 'fr-CA',
+    langage: window.navigator.language
+        ? window.navigator.language.includes('fr')
+            ? 'fr'
+            : 'en'
+        : 'en',
 };
 
 const langage = createSlice({

@@ -9,9 +9,13 @@
     translate: var(--translate-brace);
 }
 
+.header-description-text {
+    color: rgb(var(--color-white-text-both));
+}
+
 .curly-braces {
-    height: 200%;
-    top: -50%;
+    height: 250px;
+    top: -100px;
     position: absolute;
     transition: translate 300ms;
     stroke: rgb(var(--color-orange));
@@ -40,11 +44,7 @@
 
 .header-description p {
     text-wrap: balance;
-    max-width: 100rem;
-}
-
-.anglais {
-    color: rgb(var(--color-grey));
+    max-width: 90rem;
 }
 
 /* Animation on load */

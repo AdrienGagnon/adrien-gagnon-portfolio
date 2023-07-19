@@ -27,6 +27,10 @@
     transition: opacity 300ms;
 }
 
+main[data-theme='dark'] .social-links img {
+    filter: invert(100%);
+}
+
 .social-links div:hover img {
     opacity: 1;
 }

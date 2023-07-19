@@ -18,16 +18,17 @@
 
 .header-name,
 .header-profession {
-    color: rgb(var(--color-white));
     text-align: left;
 }
 
 .header-name {
+    color: rgb(var(--color-white-text));
     font-size: 10rem;
     text-shadow: 3px 3px black;
 }
 
 .header-profession {
+    color: rgb(var(--color-white-text-both));
     font-size: 6rem;
     text-shadow: 2px 2px black;
 }

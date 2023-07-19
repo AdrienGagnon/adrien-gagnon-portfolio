@@ -9,7 +9,10 @@
     --color-red-soft: 87, 0, 0;
     --color-red-bright: 160, 5, 0;
     --color-white: 252, 255, 255;
+    --color-white-text: 252, 255, 255;
+    --color-white-text-both: 252, 255, 255;
     --color-orange: 255, 106, 5;
+    --color-black: 0, 0, 0;
     --color-grey: 170, 170, 170;
 }
 
@@ -20,19 +23,50 @@ main[data-theme='dark'] {
     --color-orange-hex: #d4adfc;
     --color-black: #fcffff;
 
-    --color-red-soft: 12, 19, 79;
-    --color-red-bright: 29, 38, 125;
-    --color-white: 92, 70, 156;
-    --color-orange: 212, 173, 252;
+    --color-red-soft: 35, 39, 47;
+    --color-red-bright: 52, 58, 70;
+    --color-white: 43, 48, 59;
+    --color-white-text: 20, 158, 202;
+    --color-white-text-both: 252, 255, 255;
+    --color-orange: 20, 158, 202;
+    --color-black: 252, 255, 255;
+    --color-grey: 170, 170, 170;
 
-    --color-blue: 35, 39, 47;
-    --color-blue-bright: 52, 58, 70;
-    --color-text-blue: 20, 158, 202;
+    --color-blue-black: 35, 39, 47;
+    --color-blue: 52, 58, 70;
+    --color-blue-bright: 20, 158, 202;
+    --color-blue-dark: 43, 48, 59;
 }
 
 * {
     color: rgb(var(--color-black));
 }
+
+/* span {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+span:nth-child(1) {
+    left: 0;
+    background-color: rgb(var(--color-red-soft));
+}
+
+span:nth-child(2) {
+    left: 100px;
+    background-color: rgb(var(--color-red-bright));
+}
+
+span:nth-child(3) {
+    left: 200px;
+    background-color: rgb(var(--color-white));
+}
+
+span:nth-child(4) {
+    left: 300px;
+    background-color: rgb(var(--color-orange));
+} */
 
 /* html {
     scroll-snap-type: y mandatory;
@@ -42,6 +76,7 @@ main[data-theme='dark'] {
 #header,
 #portfolio-item-1,
 #portfolio-item-2,
+#portfolio-item-3,
 #contact {
     scroll-snap-align: start;
     scroll-behavior: smooth;
