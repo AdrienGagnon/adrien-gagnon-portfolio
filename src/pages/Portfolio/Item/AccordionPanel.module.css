@@ -7,7 +7,7 @@
     border-radius: calc(
         ((var(--_panel-padding) * 2) + var(--_button-size)) / 2
     );
-    outline: 1px solid black;
+    outline: 2px solid rgb(var(--color-orange));
 }
 
 .accordion-panel * {

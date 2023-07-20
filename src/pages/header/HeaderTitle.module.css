@@ -2,9 +2,10 @@
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     justify-content: center;
-    margin: 10rem 2rem;
+    margin: 10rem 2rem 15rem;
     gap: 2rem;
     align-items: center;
+    position: relative;
 }
 
 .photo-finissant {

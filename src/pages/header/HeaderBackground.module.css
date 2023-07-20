@@ -1,6 +1,56 @@
 /* SVG background */
 
 .background-container {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+    /* background: radial-gradient(red 20%, transparent);
+    background-position: 0 0, 2.5rem 2.5rem;
+    background-size: 5rem 5rem; */
+}
+
+.background-container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    height: 100%;
+    background: radial-gradient(
+        ellipse,
+        transparent 0,
+        rgb(var(--color-red-bright)) 70%
+    );
+    z-index: 10;
+}
+
+/* .background-container svg {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+
+.background-container pattern {
+    width: 500px;
+    height: 500px;
+}
+
+.background-container pattern rect {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+.background-container > rect {
+    position: absolute;
+    z-index: 10;
+    display: block;
+    width: 500px;
+    height: 200px;
+} */
+
+/* .background-container {
     --dimension: 250px;
     --image-width: 300px;
     position: absolute;
@@ -24,7 +74,6 @@
     fill: none;
 }
 
-/* Individual squares */
 
 #one {
     transform: scale(1.5) rotate(45deg);
@@ -32,4 +81,4 @@
 
 #two {
     transform: scale(1.2) translate(250px, -150px) rotate(45deg);
-}
+} */

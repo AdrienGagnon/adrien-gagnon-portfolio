@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 
 import { toSection } from '../utils/toSection';
+import { sections } from '../../constants/constants';
 import styles from './SectionSelector.module.css';
 
 function SectionSelector() {
@@ -12,20 +13,12 @@ function SectionSelector() {
 
     useEffect(() => {
         if (!activeIcon) return;
-        setActiveIndex(sectionsIds.findIndex(el => el === activeIcon));
+        setActiveIndex(sections.findIndex(el => el === activeIcon));
     }, [activeIcon]);
-
-    const sectionsIds = [
-        'header',
-        'portfolio-item-1',
-        'portfolio-item-2',
-        'portfolio-item-3',
-        'contact',
-    ];
 
     return (
         <div className={styles['svg-container']}>
-            {sectionsIds.map((section, index) => {
+            {sections.map((section, index) => {
                 return (
                     <a key={section} onClick={() => toSection(section)}>
                         <svg

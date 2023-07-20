@@ -1,4 +1,24 @@
-import { getFirstFocusableNode } from '@mrolaolu/helpers';
+import store from '../../store';
+import { sections } from '../../constants/constants';
+import { toSection } from './toSection';
+
+export const scrollEvents = e => {
+    const currentSection = store.getState().activeSection.activeSection;
+    const currentIndex = sections.findIndex(
+        section => currentSection === section
+    );
+
+    let newIndex;
+    if (e.wheelDeltaY < 0 && currentIndex < sections.length - 1) {
+        newIndex = currentIndex + 1;
+        toSection(sections[newIndex]);
+    } else if (e.wheelDeltaY > 0 && currentIndex !== 0) {
+        newIndex = currentIndex - 1;
+        toSection(sections[newIndex]);
+    }
+};
+
+/* import { getFirstFocusableNode } from '@mrolaolu/helpers';
 import { SECTION_SELECTOR, CURRENT_SECTION, NAVIGATION_ID } from './constants';
 import { isMotionReduced } from '@saucedrip/core/helpers';
 
@@ -90,3 +110,4 @@ function smoothScroll(scrollTargetY, speed = 1000) {
 
     runAnimation();
 }
+ */

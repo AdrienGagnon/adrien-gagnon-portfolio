@@ -1,11 +1,14 @@
+import { useSelector } from 'react-redux';
 import styles from './SectionTitle.module.css';
 
 function SectionTitle({ titleFr, titleEn }) {
+    const langage = useSelector(state => {
+        return state.langage.langage;
+    });
+
     return (
         <h2 className={styles['section-title']}>
-            <p>{titleFr}</p>
-            <span className={styles['section-separator']}></span>
-            <p className={styles['anglais']}>{titleEn}</p>
+            {langage === 'fr' ? titleFr : titleEn}
         </h2>
     );
 }

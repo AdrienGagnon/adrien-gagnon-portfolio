@@ -1,5 +1,6 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { intersectionObserver } from '../utils/intersectionObserver';
+import { useSelector } from 'react-redux';
 
 import Footer from '../Footer/Footer';
 import BtnLink from '../components/Buttons/BtnLink';
@@ -8,11 +9,56 @@ import styles from './Contact.module.css';
 import ToTop from '../components/Buttons/ToTop';
 
 function Contact() {
+    const [text, setText] = useState({
+        name: 'Nom',
+        name_placeholder: 'Votre nom',
+        adress: 'Adresse email',
+        adress_placeholder: 'Votre adresse email',
+        subject: 'Sujet',
+        subject_placeholder: 'Sujet',
+        description: 'Description',
+        description_placeholder: 'Écrivez votre message ici.',
+    });
+    const langage = useSelector(state => {
+        return state.langage.langage;
+    });
     const contactRef = useRef();
 
     useEffect(() => {
         intersectionObserver(contactRef.current);
     }, []);
+
+    useEffect(() => {
+        setText(
+            langage === 'fr'
+                ? {
+                      message:
+                          "Laisser-moi un message et une légendaire collaboration pourrait s'ensuivre!",
+                      name: 'Nom',
+                      name_placeholder: 'Votre nom',
+                      adress: 'Adresse email',
+                      adress_placeholder: 'Votre adresse email',
+                      subject: 'Sujet',
+                      subject_placeholder: 'Sujet',
+                      description: 'Description',
+                      description_placeholder: 'Écrivez votre message ici.',
+                      submit: 'Soumettre',
+                  }
+                : {
+                      message:
+                          'Get in touch with me for business propositions or simply to say hello!',
+                      name: 'Name',
+                      name_placeholder: 'Your name',
+                      adress: 'Adress email',
+                      adress_placeholder: 'Your adress email',
+                      subject: 'Subject',
+                      subject_placeholder: 'Subject',
+                      description: 'Description',
+                      description_placeholder: 'Write your message here.',
+                      submit: 'Submit',
+                  }
+        );
+    }, [langage]);
 
     return (
         <div
@@ -21,47 +67,44 @@ function Contact() {
             id="contact"
         >
             <SectionTitle titleFr={'Me contacter'} titleEn={'Contact me'} />
-            <div>
-                <p></p>
-                <p></p>
-            </div>
+            <p className={styles['contact-message']}>{text.message}</p>
             <form
                 action="https://formsubmit.co/adrien.gagnon25@outlook.com"
                 method="POST"
             >
                 <div className={styles['form-contact-container']}>
-                    <label htmlFor="name">Nom</label>
+                    <label htmlFor="name">{text.name}</label>
                     <input
                         id="name"
                         type="text"
                         name="name"
-                        placeholder="Votre nom"
+                        placeholder={text.name_placeholder}
                         required
                     />
-                    <label htmlFor="email">Adresse email</label>
+                    <label htmlFor="email">{text.adress}</label>
                     <input
                         id="email"
                         type="text"
                         name="email"
-                        placeholder="Adresse email"
+                        placeholder={text.adress_placeholder}
                         required
                     />
-                    <label htmlFor="subject">Subject</label>
+                    <label htmlFor="subject">{text.subject}</label>
                     <input
                         id="subject"
                         type="text"
                         name="subject"
-                        placeholder="Subject"
+                        placeholder={text.subject_placeholder}
                     />
                     <label htmlFor="description" className={styles.description}>
-                        Description
+                        {text.description}
                     </label>
                     <textarea
                         id="description"
                         type="text"
                         rows="5"
                         name="description"
-                        placeholder="Écrivez votre message ici."
+                        placeholder={text.description_placeholder}
                         required
                     ></textarea>
                 </div>
@@ -69,8 +112,7 @@ function Contact() {
                 <BtnLink
                     type="btn"
                     value="Soumettre"
-                    fr={'Soumettre /'}
-                    en={'/ Submit'}
+                    text={text.submit}
                     options={{ type: 'submit' }}
                 />
             </form>

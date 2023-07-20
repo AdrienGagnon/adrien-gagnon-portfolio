@@ -1,0 +1,47 @@
+.scroll-svg {
+    height: 70px;
+    border: 2px rgb(var(--color-orange)) dotted;
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 50%;
+    margin-inline: auto;
+    margin-top: 5rem;
+}
+
+.scroll-svg path {
+    fill: rgb(var(--color-orange));
+}
+
+.scroll-svg path:nth-of-type(2) {
+    opacity: 0;
+    animation: scrollDown 2s infinite;
+}
+
+@keyframes scrollDown {
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    .scroll-svg {
+        opacity: 0;
+        transform: translateY(5rem);
+        animation: fadeInStart 1s forwards;
+        animation-delay: 900ms;
+    }
+}
+
+@keyframes fadeInStart {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

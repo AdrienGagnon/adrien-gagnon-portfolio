@@ -10,7 +10,6 @@ html {
     font-size: 62.5%;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    overflow: hidden;
 }
 
 body {
@@ -19,4 +18,10 @@ body {
 
 main * {
     transition: background-color 300ms, color 300ms, fill 300ms;
+}
+
+@media screen and (min-width: 1000px) {
+    html {
+        overflow: hidden;
+    }
 }

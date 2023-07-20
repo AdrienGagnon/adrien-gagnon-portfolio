@@ -5,6 +5,7 @@ import photoFinissant from './assets/photo-finissant-zoom.png';
 function HeaderTitle() {
     return (
         <div className={styles['header-container']}>
+            <HeaderBackground />
             <div className={styles['photo-wrapper']}>
                 <div className={styles['photo-container']}>
                     <img
@@ -12,7 +13,6 @@ function HeaderTitle() {
                         src={photoFinissant}
                         alt="photo-finissant"
                     />
-                    <HeaderBackground />
                 </div>
             </div>
             <div>

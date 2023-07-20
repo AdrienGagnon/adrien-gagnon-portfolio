@@ -1,13 +1,12 @@
 import styles from './BtnLink.module.css';
 
-function BtnLink({ type = 'link', link, fr, en, options = undefined }) {
+function BtnLink({ type = 'link', link, options = undefined, text }) {
     const content = (
         <>
             <span className={styles['circle']}></span>
             <span className={styles['circle']}></span>
             <span className={styles['circle']}></span>
-            <span className={styles['francais']}>{fr}</span>
-            <span className={styles['anglais']}>{en}</span>
+            <span className={styles['text']}>{text}</span>
         </>
     );
 

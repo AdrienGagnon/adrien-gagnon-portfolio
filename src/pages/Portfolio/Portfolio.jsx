@@ -22,8 +22,13 @@ import adrienMenu from './assets/adrien-menu.png';
 import adrienCompetences from './assets/adrien-competences.png';
 import adrienPhotos from './assets/adrien-photos.png';
 import adrienQuiz from './assets/adrien-quiz.png';
+import { useSelector } from 'react-redux';
 
 function Portfolio() {
+    const langage = useSelector(state => {
+        return state.langage.langage;
+    });
+
     const portfolio1Ref = useRef();
     const portfolio2Ref = useRef();
     const portfolio3Ref = useRef();
@@ -47,10 +52,8 @@ function Portfolio() {
                 "Cette application permet de chercher et faire jouer vos chansons favorites via l'API de Spotify. Vous pouvez vous connectez à votre compte personnel et accéder à vos propres playlist enregistrées.",
             description_en:
                 'This application allows you to search and play your favorite songs via the Spotify API. You can log in to your personal account and access your own saved playlists.',
-            note_fr:
-                "Note: Project Manager n'est pas encore terminé et peut contenir quelques bugs.",
-            note_en:
-                'Note: Project Manager is not feature complete and may contain bugs.',
+            note_fr: "Note: Project Manager n'est pas encore terminé.",
+            note_en: 'Note: Project Manager is not feature complete.',
             link: 'https://playlist-manager-ag.netlify.app',
             tools: [
                 'React',
@@ -90,7 +93,7 @@ function Portfolio() {
             ],
         },
         {
-            title: 'Personal website',
+            title: 'Personal Website',
             images: [
                 { image: adrienMenu, alt: 'adrien-menu' },
                 { image: adrienCompetences, alt: 'adrien-competences' },
@@ -133,8 +136,7 @@ function Portfolio() {
                         />
                         <BtnLink
                             link={projectList[0].link}
-                            fr={'Visiter /'}
-                            en={'/ Visit'}
+                            text={langage === 'fr' ? 'Visiter' : 'Visit'}
                             options={{ absolute: true }}
                         />
                     </div>
@@ -156,8 +158,7 @@ function Portfolio() {
                     />
                     <BtnLink
                         link={projectList[1].link}
-                        fr={'Visiter /'}
-                        en={'/ Visit'}
+                        text={langage === 'fr' ? 'Visiter' : 'Visit'}
                         options={{ absolute: true }}
                     />
                 </div>
@@ -172,11 +173,15 @@ function Portfolio() {
                     <PortfolioDescription
                         project={projectList[2]}
                         layout={'normal'}
+                        title={
+                            langage === 'fr'
+                                ? 'Site personnel'
+                                : 'Personel Website'
+                        }
                     />
                     <BtnLink
                         link={projectList[2].link}
-                        fr={'Visiter /'}
-                        en={'/ Visit'}
+                        text={langage === 'fr' ? 'Visiter' : 'Visit'}
                         options={{ absolute: true }}
                     />
                 </div>

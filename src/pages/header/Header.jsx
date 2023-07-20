@@ -4,6 +4,7 @@ import { intersectionObserver } from '../utils/intersectionObserver';
 import styles from './Header.module.css';
 import HeaderDescription from './HeaderDescription';
 import HeaderTitle from './HeaderTitle';
+import ScrollIcon from './ScrollIcon';
 
 function Header() {
     const headerRef = useRef();
@@ -17,6 +18,7 @@ function Header() {
             <div className={styles['header-fixed']}>
                 <HeaderTitle />
                 <HeaderDescription />
+                <ScrollIcon />
             </div>
         </header>
     );

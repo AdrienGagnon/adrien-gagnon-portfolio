@@ -11,3 +11,11 @@ export {
     color_orange_hex,
     color_grey_hex,
 };
+
+export const sections = [
+    'header',
+    'portfolio-item-1',
+    'portfolio-item-2',
+    'portfolio-item-3',
+    'contact',
+];

@@ -3,6 +3,7 @@
     display: flex;
     font-size: 1.6rem;
     gap: var(--gap-tool);
+    position: relative;
 }
 
 .tools-container > * {
@@ -18,7 +19,7 @@
     left: calc(-1.5px + -1 * var(--gap-tool) / 2);
     top: 0;
     display: block;
-    width: 3px;
+    width: 2px;
     height: 100%;
     background-color: rgb(var(--color-orange));
     border-radius: 1rem;
