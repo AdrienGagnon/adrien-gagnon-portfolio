@@ -12,12 +12,27 @@
 }
 
 .svg-container svg.active {
-    rotate: 180deg;
+    rotate: 90deg;
     border-radius: 100%;
 }
 
 .svg-container svg.active rect {
     animation: roundIcon 300ms forwards 150ms;
+}
+
+.svg-container rect {
+    stroke-dasharray: 120;
+    stroke-dashoffset: 0;
+    animation: dash 1.5s linear;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 120;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 @keyframes roundIcon {

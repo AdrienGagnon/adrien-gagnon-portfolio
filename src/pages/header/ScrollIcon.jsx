@@ -1,8 +1,14 @@
 import styles from './ScrollIcon.module.css';
 
-function ScrollIcon() {
+function ScrollIcon({ headerTransition }) {
     return (
-        <svg className={styles['scroll-svg']} viewBox="0 0 50 50">
+        <svg
+            className={[
+                styles['scroll-svg'],
+                headerTransition ? styles['transition'] : '',
+            ].join(' ')}
+            viewBox="0 0 50 50"
+        >
             <g>
                 <path
                     d="M25 45a14 14 0 0 0 14-14V19a14 14 0 0 0-28 0v12a14 14 0 0 0 14 14zM13 19a12 12 0 0 1 24 0v12a12 12 0 0 1-24 0z"

@@ -2,10 +2,14 @@ import HeaderBackground from './HeaderBackground';
 import styles from './HeaderTitle.module.css';
 import photoFinissant from './assets/photo-finissant-zoom.png';
 
-function HeaderTitle() {
+function HeaderTitle({ headerTransition }) {
     return (
-        <div className={styles['header-container']}>
-            <HeaderBackground />
+        <div
+            className={[
+                styles['header-container'],
+                headerTransition ? styles['transition'] : '',
+            ].join(' ')}
+        >
             <div className={styles['photo-wrapper']}>
                 <div className={styles['photo-container']}>
                     <img
@@ -13,9 +17,10 @@ function HeaderTitle() {
                         src={photoFinissant}
                         alt="photo-finissant"
                     />
+                    <HeaderBackground />
                 </div>
             </div>
-            <div>
+            <div className={styles['header-name-container']}>
                 <h1 className={styles['header-name']}>Adrien Gagnon</h1>
                 <div>
                     <p className={styles['header-profession']}>

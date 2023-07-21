@@ -14,8 +14,7 @@
 }
 
 .curly-braces {
-    height: 250px;
-    top: -100px;
+    height: 200px;
     position: absolute;
     transition: translate 300ms;
     stroke: rgb(var(--color-orange));
@@ -23,12 +22,12 @@
 
 .left-brace {
     --translate-brace: 2rem;
-    left: calc(-26rem + 20%);
+    left: calc(-26rem + 30%);
 }
 
 .right-brace {
     --translate-brace: -2rem;
-    right: calc(-26rem + 20%);
+    right: calc(-26rem + 30%);
 }
 
 .header-description {
@@ -38,6 +37,7 @@
     justify-content: center;
     color: rgb(var(--color-white));
     font-size: 2rem;
+    font-weight: 500;
     gap: 1rem;
     margin-inline: 5rem;
 }
@@ -58,7 +58,6 @@
 
     .left-brace,
     .right-brace {
-        opacity: 0;
         transform: translateX(-5rem);
         --delay: 900ms;
     }
@@ -67,8 +66,7 @@
         transform: translateX(5rem);
     }
 
-    .header-description,
-    .curly-braces {
+    .header-description {
         animation: fadeInStart 1s forwards;
         animation-delay: var(--delay);
     }
@@ -77,6 +75,55 @@
 @keyframes fadeInStart {
     to {
         opacity: 1;
-        transform: translateX(0) translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.curly-braces path {
+    opacity: 0;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+    animation: dash 2s linear forwards;
+    animation-delay: 900ms;
+}
+
+@keyframes dash {
+    from {
+        opacity: 1;
+        stroke-dashoffset: 100;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        stroke-dashoffset: 0;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .header-description {
+        margin-inline: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header-description-container {
+        padding-inline: 0;
+    }
+    .curly-braces {
+        transform: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .curly-braces {
+        display: none;
+    }
+    .header-description-text {
+        border: 2px solid rgb(var(--color-orange));
+        padding: 1rem;
+        border-radius: 2rem;
+    }
+    .header-description-container {
+        margin-inline: 2rem;
     }
 }

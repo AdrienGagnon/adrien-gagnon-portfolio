@@ -47,13 +47,31 @@
 }
 
 .form-contact-container label {
+    --translateX: -5rem;
     text-align: end;
     margin-block: auto;
     margin-right: 2rem;
+    opacity: 0;
+}
+
+label:nth-of-type(2),
+input:nth-of-type(2) {
+    --delay: 300ms;
+}
+
+label:nth-of-type(3),
+input:nth-of-type(3) {
+    --delay: 600ms;
+}
+
+label:nth-of-type(4),
+textarea {
+    --delay: 900ms;
 }
 
 .form-contact-container input,
 .form-contact-container textarea {
+    --translateX: 5rem;
     text-align: start;
     color: black;
     border: 2px solid rgb(var(--color-orange));
@@ -61,6 +79,23 @@
     padding: 1rem;
     max-width: 50rem;
     resize: none;
+    opacity: 0;
+}
+
+.contact-container.active input,
+.contact-container.active textarea,
+.contact-container.active label {
+    opacity: 0;
+    translate: var(--translateX);
+    animation: slideIn 1000ms forwards ease-in;
+    animation-delay: var(--delay);
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        translate: 0;
+    }
 }
 
 .form-contact-container input:focus,

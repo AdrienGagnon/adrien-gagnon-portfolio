@@ -9,6 +9,7 @@ import styles from './Contact.module.css';
 import ToTop from '../components/Buttons/ToTop';
 
 function Contact() {
+    const [active, setActive] = useState(false);
     const [text, setText] = useState({
         name: 'Nom',
         name_placeholder: 'Votre nom',
@@ -21,6 +22,9 @@ function Contact() {
     });
     const langage = useSelector(state => {
         return state.langage.langage;
+    });
+    const activeSection = useSelector(state => {
+        return state.activeSection.activeSection;
     });
     const contactRef = useRef();
 
@@ -60,10 +64,17 @@ function Contact() {
         );
     }, [langage]);
 
+    useEffect(() => {
+        activeSection === 'contact' && !active && setActive(true);
+    }, [activeSection]);
+
     return (
         <div
             ref={contactRef}
-            className={styles['contact-container']}
+            className={[
+                styles['contact-container'],
+                active ? styles['active'] : '',
+            ].join(' ')}
             id="contact"
         >
             <SectionTitle titleFr={'Me contacter'} titleEn={'Contact me'} />

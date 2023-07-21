@@ -8,10 +8,31 @@
     min-height: calc(100vh + 20rem);
 }
 
+.header::before {
+    position: fixed;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    height: 15rem;
+    background: linear-gradient(transparent, rgb(var(--color-red-soft)));
+    transition: all 300ms;
+}
+
 .header-fixed {
     position: fixed;
     display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
+}
+
+.header.transition::before {
+    height: 30rem;
+    background: linear-gradient(transparent, rgb(var(--color-red-soft)));
+}
+
+@media screen and (max-width: 1000px) {
+    .header-fixed {
+        position: absolute;
+    }
 }

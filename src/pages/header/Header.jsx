@@ -5,8 +5,13 @@ import styles from './Header.module.css';
 import HeaderDescription from './HeaderDescription';
 import HeaderTitle from './HeaderTitle';
 import ScrollIcon from './ScrollIcon';
+import { useSelector } from 'react-redux';
 
 function Header() {
+    const headerTransition = useSelector(state => {
+        return state.sectionTransitions.headerOut;
+    });
+
     const headerRef = useRef();
 
     useEffect(() => {
@@ -14,11 +19,18 @@ function Header() {
     }, []);
 
     return (
-        <header ref={headerRef} className={styles['header']} id="header">
+        <header
+            ref={headerRef}
+            className={[
+                styles['header'],
+                headerTransition ? styles['transition'] : '',
+            ].join(' ')}
+            id="header"
+        >
             <div className={styles['header-fixed']}>
-                <HeaderTitle />
+                <HeaderTitle headerTransition={headerTransition} />
                 <HeaderDescription />
-                <ScrollIcon />
+                <ScrollIcon headerTransition={headerTransition} />
             </div>
         </header>
     );
