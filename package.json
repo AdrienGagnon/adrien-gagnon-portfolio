@@ -1,24 +1,24 @@
 {
-	"name": "adrien-gagnon-portfolio",
-	"version": "1.0.0",
-	"description": "Mon portfolio personnel de développeur web.",
-	"main": "index.js",
-	"scripts": {
-		"start": "parcel ./public/index.html",
-		"build": "parcel build ./public/index.html --dist-dir ./dist"
-	},
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"@reduxjs/toolkit": "^1.9.5",
-		"parcel": "^2.9.3",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-redux": "^8.1.1",
-		"react-router-dom": "^6.14.1"
-	},
-	"devDependencies": {
-		"@parcel/transformer-inline-string": "^2.9.3",
-		"process": "^0.11.10"
-	}
+    "name": "adrien-gagnon-portfolio",
+    "version": "1.0.0",
+    "description": "Mon portfolio personnel de développeur web.",
+    "scripts": {
+        "start": "parcel ./public/index.html",
+        "build": "parcel build ./public/index.html --dist-dir ./dist"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@reduxjs/toolkit": "^1.9.5",
+        "parcel": "^2.9.3",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-redux": "^8.1.1",
+        "react-router-dom": "^6.14.1"
+    },
+    "devDependencies": {
+        "@parcel/transformer-inline-string": "^2.9.3",
+        "autoprefixer": "^10.4.14",
+        "process": "^0.11.10"
+    }
 }
