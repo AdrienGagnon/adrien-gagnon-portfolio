@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 
 import styles from './PortfolioDescription.module.css';
 import Tools from './Tools';
+import BtnLink from '../../components/Buttons/BtnLink';
 
 function PortfolioDescription({ project, title }) {
     const langage = useSelector(state => {
@@ -17,11 +18,20 @@ function PortfolioDescription({ project, title }) {
                     : project.description_en}
             </p>
             {project.note_fr ? (
-                <p>{langage === 'fr' ? project.note_fr : project.note_en}</p>
+                <div className={styles['note-container']}>
+                    <p>
+                        <span>Note:</span>
+                        {langage === 'fr' ? project.note_fr : project.note_en}
+                    </p>
+                </div>
             ) : (
                 <></>
             )}
             <Tools tools={project.tools} />
+            <BtnLink
+                link={project.link}
+                text={langage === 'fr' ? 'Visiter' : 'Visit'}
+            />
         </div>
     );
 }

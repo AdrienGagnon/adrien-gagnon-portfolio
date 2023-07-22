@@ -16,6 +16,7 @@
 }
 
 .photo-finissant {
+    background-color: rgb(var(--color-red-bright), 0.8);
     height: 30rem;
     aspect-ratio: 1;
     border-radius: 100%;

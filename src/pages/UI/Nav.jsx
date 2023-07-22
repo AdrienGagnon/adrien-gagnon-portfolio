@@ -2,8 +2,12 @@ import { useSelector } from 'react-redux';
 
 import styles from './Nav.module.css';
 import { toSection } from '../utils/toSection';
+import { useSelector } from 'react-redux';
 
 function Nav() {
+    const headerTransition = useSelector(state => {
+        return state.sectionTransitions.headerOut;
+    });
     const activeSection = useSelector(state => {
         return state.activeSection.activeSection;
     });
@@ -13,6 +17,7 @@ function Nav() {
             className={[
                 styles.nav,
                 activeSection === 'header' ? '' : styles.sticky,
+                headerTransition ? styles['transition'] : '',
             ].join(' ')}
         >
             <a onClick={() => toSection('header')}>Menu</a>

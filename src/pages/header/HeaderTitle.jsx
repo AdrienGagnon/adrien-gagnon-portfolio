@@ -1,6 +1,6 @@
-import HeaderBackground from './HeaderBackground';
+import ImgRays from './ImgRays';
 import styles from './HeaderTitle.module.css';
-import photoFinissant from './assets/photo-finissant-zoom.png';
+import photoFinissant from './assets/photo-finissant-zoom-500.png';
 
 function HeaderTitle({ headerTransition }) {
     return (
@@ -17,7 +17,7 @@ function HeaderTitle({ headerTransition }) {
                         src={photoFinissant}
                         alt="photo-finissant"
                     />
-                    <HeaderBackground />
+                    <ImgRays />
                 </div>
             </div>
             <div className={styles['header-name-container']}>

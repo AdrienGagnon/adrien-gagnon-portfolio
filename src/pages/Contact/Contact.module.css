@@ -6,6 +6,7 @@
     z-index: 1;
     position: relative;
     min-height: 100vh;
+    padding-bottom: 5rem;
 }
 
 .contact-message {
@@ -56,17 +57,17 @@
 
 label:nth-of-type(2),
 input:nth-of-type(2) {
-    --delay: 300ms;
+    --delay: 150ms;
 }
 
 label:nth-of-type(3),
 input:nth-of-type(3) {
-    --delay: 600ms;
+    --delay: 300ms;
 }
 
 label:nth-of-type(4),
 textarea {
-    --delay: 900ms;
+    --delay: 450ms;
 }
 
 .form-contact-container input,
@@ -107,4 +108,21 @@ textarea {
 
 label.description {
     margin-top: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+    .form-contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-container label {
+        text-align: start;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .contact-container {
+        padding-inline: 8rem;
+    }
 }

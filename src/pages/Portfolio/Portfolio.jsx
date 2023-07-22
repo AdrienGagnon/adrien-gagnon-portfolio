@@ -41,31 +41,6 @@ function Portfolio() {
 
     const projectList = [
         {
-            title: 'Project Manager',
-            images: [
-                { image: playlistLogin, alt: 'playlist-login' },
-                { image: playlistHome, alt: 'playlist-home' },
-                { image: playlistPlaylistView, alt: 'playlist-playlistView' },
-                { image: playlistSectionView, alt: 'playlist-sectionView' },
-            ],
-            description_fr:
-                "Cette application permet de chercher et faire jouer vos chansons favorites via l'API de Spotify. Vous pouvez vous connectez à votre compte personnel et accéder à vos propres playlist enregistrées.",
-            description_en:
-                'This application allows you to search and play your favorite songs via the Spotify API. You can log in to your personal account and access your own saved playlists.',
-            note_fr: "Note: Project Manager n'est pas encore terminé.",
-            note_en: 'Note: Project Manager is not feature complete.',
-            link: 'https://playlist-manager-ag.netlify.app',
-            tools: [
-                'React',
-                'JavaScript',
-                'HTML',
-                'CSS',
-                'Redux',
-                'SpotifyAPI',
-                'Netlify',
-            ],
-        },
-        {
             title: 'Natours',
             images: [
                 { image: natoursAllTours, alt: 'natours-all-tours' },
@@ -78,9 +53,9 @@ function Portfolio() {
             description_en:
                 'Natours allows you to find out about various tours organized around the world. By logging in to your personal account, you can buy tours through Stripe and write reviews on the tours you have taken.',
             note_fr:
-                "Note: L'établissement de la connexion avec la base de données peut prendre jusqu'à 1 minute.",
+                "L'établissement de la connexion avec la base de données peut prendre jusqu'à 1 minute.",
             note_en:
-                'Note: It may take up to 1 minute to initiate the connection with the database.',
+                'It may take up to 1 minute to initiate the connection with the database.',
             link: 'https://natours-y70o.onrender.com',
             tools: [
                 'Node.js',
@@ -90,6 +65,31 @@ function Portfolio() {
                 'CSS',
                 'Stripe',
                 'Render',
+            ],
+        },
+        {
+            title: 'Project Manager',
+            images: [
+                { image: playlistLogin, alt: 'playlist-login' },
+                { image: playlistHome, alt: 'playlist-home' },
+                { image: playlistPlaylistView, alt: 'playlist-playlistView' },
+                { image: playlistSectionView, alt: 'playlist-sectionView' },
+            ],
+            description_fr:
+                "Cette application permet de chercher et faire jouer vos chansons favorites via l'API de Spotify. Vous pouvez vous connectez à votre compte personnel et accéder à vos propres playlist enregistrées.",
+            description_en:
+                'This application allows you to search and play your favorite songs via the Spotify API. You can log in to your personal account and access your own saved playlists.',
+            note_fr: "Project Manager n'est pas encore terminé.",
+            note_en: 'Project Manager is not feature complete.',
+            link: 'https://playlist-manager-ag.netlify.app',
+            tools: [
+                'React',
+                'JavaScript',
+                'HTML',
+                'CSS',
+                'Redux',
+                'SpotifyAPI',
+                'Netlify',
             ],
         },
         {

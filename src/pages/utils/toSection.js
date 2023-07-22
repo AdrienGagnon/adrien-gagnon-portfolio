@@ -10,7 +10,7 @@ export const toSection = section => {
             document.getElementById(section).scrollIntoView({
                 behavior: 'smooth',
             });
-        }, 300);
+        }, 3000);
     } else {
         document.getElementById(section).scrollIntoView({
             behavior: 'smooth',

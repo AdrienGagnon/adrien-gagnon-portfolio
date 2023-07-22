@@ -27,14 +27,25 @@
     font-weight: 500;
 }
 
-.description-container p::before,
-.description-container > :last-child::before {
+.note-container {
+    font-size: 1.6rem;
+    position: relative;
+}
+
+.note-container span {
+    color: red;
+    margin-right: 5px;
+}
+
+.description-container > p::before,
+.description-container > .note-container:before,
+.description-container > div:last-of-type::before {
     content: '';
     position: absolute;
     top: calc(-0.5 * var(--gap));
     display: block;
     height: 2px;
-    width: 80%;
+    width: 100%;
     background-color: rgb(var(--color-orange));
     border-radius: 1rem;
 }

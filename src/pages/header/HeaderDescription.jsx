@@ -2,13 +2,18 @@ import styles from './HeaderDescription.module.css';
 import { color_orange_hex } from '../../constants/constants';
 import { useSelector } from 'react-redux';
 
-function HeaderDescription() {
+function HeaderDescription({ headerTransition }) {
     const langage = useSelector(state => {
         return state.langage.langage;
     });
 
     return (
-        <div className={styles['header-description-container']}>
+        <div
+            className={[
+                styles['header-description-container'],
+                headerTransition ? styles['transition'] : '',
+            ].join(' ')}
+        >
             <div className={styles['header-description']}>
                 <svg
                     className={[

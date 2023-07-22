@@ -6,6 +6,7 @@ import HeaderDescription from './HeaderDescription';
 import HeaderTitle from './HeaderTitle';
 import ScrollIcon from './ScrollIcon';
 import { useSelector } from 'react-redux';
+import HeaderBackground from './HeaderBackground';
 
 function Header() {
     const headerTransition = useSelector(state => {
@@ -29,9 +30,10 @@ function Header() {
         >
             <div className={styles['header-fixed']}>
                 <HeaderTitle headerTransition={headerTransition} />
-                <HeaderDescription />
+                <HeaderDescription headerTransition={headerTransition} />
                 <ScrollIcon headerTransition={headerTransition} />
             </div>
+            <HeaderBackground headerTransition={headerTransition} />
         </header>
     );
 }

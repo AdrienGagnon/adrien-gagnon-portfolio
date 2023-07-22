@@ -127,7 +127,7 @@ function Contact() {
                     options={{ type: 'submit' }}
                 />
             </form>
-            <ToTop />
+            {/* <ToTop /> */}
             <Footer />
         </div>
     );

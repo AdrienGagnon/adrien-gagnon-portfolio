@@ -1,0 +1,6 @@
+.valve path {
+    stroke: #270202;
+    stroke-width: 5;
+    fill: #460101;
+    filter: url(#shadow);
+}
