@@ -1,4 +1,5 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 import styles from './Portfolio.module.css';
 
@@ -22,11 +23,19 @@ import adrienMenu from './assets/adrien-menu.png';
 import adrienCompetences from './assets/adrien-competences.png';
 import adrienPhotos from './assets/adrien-photos.png';
 import adrienQuiz from './assets/adrien-quiz.png';
-import { useSelector } from 'react-redux';
+import BackgroundLinesItem1 from './BackgroundLines/BackgroundLinesItem1';
 
 function Portfolio() {
+    const [active, setActive] = useState({
+        item1: false,
+        item2: false,
+        item3: false,
+    });
     const langage = useSelector(state => {
         return state.langage.langage;
+    });
+    const activeSection = useSelector(state => {
+        return state.activeSection.activeSection;
     });
 
     const portfolio1Ref = useRef();
@@ -38,6 +47,28 @@ function Portfolio() {
         intersectionObserver(portfolio2Ref.current);
         intersectionObserver(portfolio3Ref.current);
     }, []);
+
+    useEffect(() => {
+        // TODO: refactor this ugly code
+        activeSection === 'portfolio-item-1' &&
+            !active.item1 &&
+            setActive({
+                ...active,
+                item1: true,
+            });
+        activeSection === 'portfolio-item-2' &&
+            !active.item2 &&
+            setActive({
+                ...active,
+                item2: true,
+            });
+        activeSection === 'portfolio-item-3' &&
+            !active.item3 &&
+            setActive({
+                ...active,
+                item3: true,
+            });
+    }, [activeSection]);
 
     const projectList = [
         {
@@ -68,7 +99,7 @@ function Portfolio() {
             ],
         },
         {
-            title: 'Project Manager',
+            title: 'Playlist Manager',
             images: [
                 { image: playlistLogin, alt: 'playlist-login' },
                 { image: playlistHome, alt: 'playlist-home' },
@@ -101,7 +132,7 @@ function Portfolio() {
                 { image: adrienQuiz, alt: 'adrien-quiz' },
             ],
             description_fr:
-                "Ce site personnel m'a permis d'expérimenter avec différents outils tout en servant de site de présentation sur moi et mes intérêts. Il comprend une section sur mes compétences, une section d'album photos prises par moi et une section quiz sur le monde!",
+                "Ce site personnel m'a permis d'expérimenter avec différents outils tout en permettant de me présenter et de partager mes intérêts. Il comprend une section sur mes compétences, une section d'album photos prises par moi et une section quiz sur le monde!",
             description_en:
                 'This personal site allowed me to experiment with different tools while serving as a presentation site for myself and my interests. It includes a section about my skills, a photo album section of pictures taken by me and a quiz section about the world!',
             link: 'https://adriengagnon.netlify.app',
@@ -120,24 +151,23 @@ function Portfolio() {
     return (
         <div className={styles['portfolio-container']}>
             <div ref={portfolio1Ref} id="portfolio-item-1">
+                <BackgroundLinesItem1 />
                 <SectionTitle
                     titleFr={'Mes projets'}
                     titleEn={'My latest work'}
+                    transition={active.item1}
                 />
                 <div className={styles['portfolio-item-container-title']}>
                     <div className={styles['item-wrapper']}>
                         <PortfolioItem
                             project={projectList[0]}
                             layout={'normal'}
+                            transition={active.item1}
                         />
                         <PortfolioDescription
                             project={projectList[0]}
                             layout={'normal'}
-                        />
-                        <BtnLink
-                            link={projectList[0].link}
-                            text={langage === 'fr' ? 'Visiter' : 'Visit'}
-                            options={{ absolute: true }}
+                            transition={active.item1}
                         />
                     </div>
                 </div>
@@ -151,15 +181,12 @@ function Portfolio() {
                     <PortfolioDescription
                         project={projectList[1]}
                         layout={'inverse'}
+                        transition={active.item2}
                     />
                     <PortfolioItem
                         project={projectList[1]}
                         layout={'inverse'}
-                    />
-                    <BtnLink
-                        link={projectList[1].link}
-                        text={langage === 'fr' ? 'Visiter' : 'Visit'}
-                        options={{ absolute: true }}
+                        transition={active.item2}
                     />
                 </div>
             </div>
@@ -169,7 +196,11 @@ function Portfolio() {
                 id="portfolio-item-3"
             >
                 <div className={styles['item-wrapper']}>
-                    <PortfolioItem project={projectList[2]} layout={'normal'} />
+                    <PortfolioItem
+                        project={projectList[2]}
+                        layout={'normal'}
+                        transition={active.item3}
+                    />
                     <PortfolioDescription
                         project={projectList[2]}
                         layout={'normal'}
@@ -178,11 +209,7 @@ function Portfolio() {
                                 ? 'Site personnel'
                                 : 'Personel Website'
                         }
-                    />
-                    <BtnLink
-                        link={projectList[2].link}
-                        text={langage === 'fr' ? 'Visiter' : 'Visit'}
-                        options={{ absolute: true }}
+                        transition={active.item3}
                     />
                 </div>
             </div>

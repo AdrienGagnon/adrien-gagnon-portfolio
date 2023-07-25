@@ -1,0 +1,74 @@
+.wrapper {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.background-container {
+    position: absolute;
+    filter: blur(1px);
+}
+
+.background-container path {
+    stroke-width: 0.6;
+    stroke: rgba(var(--color-orange), 0.5);
+}
+
+.background-container path:nth-of-type(2) {
+    stroke: rgba(var(--color-red-soft), 0.5);
+    animation: dash 10s forwards infinite linear;
+}
+
+/* Individual svgs */
+
+.bottom-left {
+    left: 0;
+    bottom: -30%;
+    height: 700px;
+}
+
+.bottom-left path:nth-of-type(2) {
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 700;
+    }
+    16% {
+        stroke-dashoffset: 0;
+    }
+    38% {
+        stroke-dashoffset: -700;
+    }
+    to {
+        stroke-dashoffset: -700;
+    }
+}
+
+.top-right {
+    right: 0;
+    top: -10%;
+    height: 900px;
+}
+
+.top-right path:nth-of-type(2) {
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 700;
+    }
+    16% {
+        stroke-dashoffset: 0;
+    }
+    38% {
+        stroke-dashoffset: -700;
+    }
+    to {
+        stroke-dashoffset: -700;
+    }
+}

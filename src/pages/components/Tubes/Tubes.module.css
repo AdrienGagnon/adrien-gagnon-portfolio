@@ -75,15 +75,19 @@
     top: 2.5rem;
     width: 100px;
     height: auto;
+    filter: blur(1px);
+    transition: rotate 2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-clipPath {
-    fill: rgb(var(--color-red-soft));
-}
-
-/* .valve path {
+.valve path {
+    translate: 5% 5%;
+    scale: 0.9;
     stroke: #270202;
     stroke-width: 5;
     fill: #460101;
-    filter: url(#shadow);
-} */
+    filter: drop-shadow(0px 0px 10px black);
+}
+
+.transition .valve {
+    rotate: 360deg;
+}

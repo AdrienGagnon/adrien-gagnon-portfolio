@@ -1,11 +1,15 @@
 import styles from './AccordionPanel.module.css';
 
-function AccordionPanel({ image, alt, number, ariaExpanded }) {
+function AccordionPanel({ image, alt, number, ariaExpanded, transition }) {
     return (
         <div
-            className={[styles['accordion-panel'], 'accordion-panel'].join(' ')}
+            className={[
+                transition ? styles['transition'] : '',
+                styles['accordion-panel'],
+                'accordion-panel',
+            ].join(' ')}
         >
-            <h3 id={`panel${number}-heading`}>
+            <h4 id={`panel${number}-heading`}>
                 <button
                     className={styles['accordion-trigger']}
                     aria-controls={`panel${number}-content`}
@@ -25,8 +29,7 @@ function AccordionPanel({ image, alt, number, ariaExpanded }) {
                         <span></span>
                     </div>
                 </button>
-            </h3>
-
+            </h4>
             <div
                 className={[
                     styles['accordion-content'],

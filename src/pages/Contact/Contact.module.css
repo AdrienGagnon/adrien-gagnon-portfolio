@@ -17,6 +17,14 @@
     margin-inline: auto;
     margin-bottom: 5rem;
     text-wrap: balance;
+    opacity: 0;
+    translate: 0 2rem;
+    transition: opacity 0.5s, translate 0.5s;
+}
+
+.active .contact-message {
+    translate: 0;
+    opacity: 1;
 }
 
 .contact-container::before {
@@ -88,7 +96,7 @@ textarea {
 .contact-container.active label {
     opacity: 0;
     translate: var(--translateX);
-    animation: slideIn 1000ms forwards ease-in;
+    animation: slideIn 500ms forwards ease-in;
     animation-delay: var(--delay);
 }
 

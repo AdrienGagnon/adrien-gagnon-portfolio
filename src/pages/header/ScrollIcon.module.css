@@ -46,7 +46,7 @@
     }
 }
 
-g {
+.scroll-svg g {
     transition: all 300ms;
 }
 

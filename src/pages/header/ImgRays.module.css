@@ -30,7 +30,7 @@
     fill-opacity: 0;
     stroke: rgb(var(--color-orange));
     stroke-opacity: 1;
-    stroke-width: 8;
+    stroke-width: 2;
     paint-order: fill;
     opacity: 0;
     --stroke-dashoffset: 180;

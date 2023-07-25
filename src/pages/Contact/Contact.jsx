@@ -77,7 +77,11 @@ function Contact() {
             ].join(' ')}
             id="contact"
         >
-            <SectionTitle titleFr={'Me contacter'} titleEn={'Contact me'} />
+            <SectionTitle
+                titleFr={'Me contacter'}
+                titleEn={'Contact me'}
+                transition={active}
+            />
             <p className={styles['contact-message']}>{text.message}</p>
             <form
                 action="https://formsubmit.co/adrien.gagnon25@outlook.com"
@@ -127,7 +131,7 @@ function Contact() {
                     options={{ type: 'submit' }}
                 />
             </form>
-            {/* <ToTop /> */}
+            <ToTop />
             <Footer />
         </div>
     );

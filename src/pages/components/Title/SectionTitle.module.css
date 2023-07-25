@@ -9,6 +9,9 @@
     width: 100%;
     font-size: 5rem;
     color: rgb(var(--color-orange));
+    opacity: 0;
+    translate: 0 2rem;
+    transition: opacity 500ms, translate 500ms;
 }
 
 .section-title::before,
@@ -20,8 +23,19 @@
     margin-block: auto;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
     .section-title {
         font-size: 3rem;
     }
+}
+
+@media screen and (max-width: 500px) {
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+.section-title.transition {
+    opacity: 1;
+    translate: 0;
 }

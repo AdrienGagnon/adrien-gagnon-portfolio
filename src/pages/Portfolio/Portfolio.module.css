@@ -47,6 +47,8 @@
 
 .item-wrapper {
     display: flex;
+    position: relative;
+    margin-bottom: 5rem;
 }
 
 .portfolio-item-container,
@@ -85,5 +87,18 @@
     .item-wrapper {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .portfolio-item-container,
+    .portfolio-item-container-title {
+        padding-inline: 2rem;
+    }
+
+    .portfolio-container .item-wrapper h3 {
+        font-size: 3rem;
+        text-align: center;
+        margin-block: 2rem 0;
     }
 }

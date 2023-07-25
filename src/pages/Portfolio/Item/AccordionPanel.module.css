@@ -8,6 +8,41 @@
         ((var(--_panel-padding) * 2) + var(--_button-size)) / 2
     );
     outline: 2px solid rgb(var(--color-orange));
+
+    opacity: 0;
+    transform: translate(10rem);
+    transition: opacity 500ms, translate 500ms, transform 500ms;
+    transition-delay: var(--delay-panel);
+}
+
+@media screen and (min-width: 1450px) {
+    .accordion-panel {
+        transform: translate(0, 10rem);
+    }
+}
+
+.accordion-panel:nth-of-type(2) {
+    --delay-panel: 300ms;
+}
+
+.accordion-panel:nth-of-type(3) {
+    --delay-panel: 600ms;
+}
+
+.accordion-panel:nth-of-type(4) {
+    --delay-panel: 900ms;
+}
+
+.accordion-panel.transition {
+    animation: panelSlideIn 500ms forwards ease-in;
+    animation-delay: var(--delay-panel);
+}
+
+@keyframes panelSlideIn {
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
 }
 
 .accordion-panel * {
@@ -16,7 +51,8 @@
 
 @media (prefers-reduced-motion: no-preference) {
     .accordion-panel {
-        transition: flex-basis 500ms, flex-grow 500ms;
+        transition: flex-basis 500ms, flex-grow 500ms, opacity 500ms,
+            translate 500ms, transform 500ms;
     }
 }
 
@@ -127,5 +163,11 @@
 @keyframes expand {
     to {
         transform: rotate(var(--angle-turn));
+    }
+}
+
+@media (max-width: 850px) {
+    .accordion-panel {
+        width: 100% !important;
     }
 }

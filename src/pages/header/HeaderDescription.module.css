@@ -23,6 +23,7 @@
     position: absolute;
     transition: translate 300ms, opacity 300ms;
     stroke: rgb(var(--color-orange));
+    stroke-width: 0.2;
 }
 
 .left-brace {

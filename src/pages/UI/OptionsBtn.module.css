@@ -6,7 +6,6 @@
     right: 1rem;
     top: 1rem;
     z-index: 150;
-    cursor: pointer;
     padding-top: 5rem;
     isolation: isolate;
     overflow: hidden;
@@ -76,6 +75,12 @@
 .sliders-container > div:nth-child(2),
 .sliders-container > div:nth-child(3) {
     opacity: 0;
+    display: none;
+}
+
+.active > div:nth-child(2),
+.active > div:nth-child(3) {
+    display: block;
 }
 
 .active > div:nth-child(2),

@@ -4,13 +4,19 @@ import styles from './PortfolioDescription.module.css';
 import Tools from './Tools';
 import BtnLink from '../../components/Buttons/BtnLink';
 
-function PortfolioDescription({ project, title }) {
+function PortfolioDescription({ project, title, transition, layout }) {
     const langage = useSelector(state => {
         return state.langage.langage;
     });
 
     return (
-        <div className={styles['description-container']}>
+        <div
+            className={[
+                styles['description-container'],
+                transition ? styles['transition'] : '',
+                layout === 'normal' ? styles['normal'] : styles['inverse'],
+            ].join(' ')}
+        >
             <h3>{title ? title : project.title}</h3>
             <p>
                 {langage === 'fr'
@@ -28,10 +34,12 @@ function PortfolioDescription({ project, title }) {
                 <></>
             )}
             <Tools tools={project.tools} />
-            <BtnLink
-                link={project.link}
-                text={langage === 'fr' ? 'Visiter' : 'Visit'}
-            />
+            <span className={styles['btn-wrapper']}>
+                <BtnLink
+                    link={project.link}
+                    text={langage === 'fr' ? 'Visiter' : 'Visit'}
+                />
+            </span>
         </div>
     );
 }

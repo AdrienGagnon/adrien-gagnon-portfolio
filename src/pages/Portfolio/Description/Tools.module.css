@@ -4,9 +4,8 @@
     font-size: 1.6rem;
     gap: var(--gap-tool);
     position: relative;
-}
-
-.tools-container > * {
+    flex-wrap: wrap;
+    max-width: 100%;
 }
 
 .tool--name {

@@ -6,11 +6,11 @@ export const toSection = section => {
     if (state.activeSection.activeSection === 'header') {
         !state.sectionTransitions.headerOut &&
             store.dispatch(sectionTransitionsActions.handleHeaderTransition());
-        setTimeout(() => {
-            document.getElementById(section).scrollIntoView({
-                behavior: 'smooth',
-            });
-        }, 3000);
+        // setTimeout(() => {
+        document.getElementById(section).scrollIntoView({
+            behavior: 'smooth',
+        });
+        // }, 1000);
     } else {
         document.getElementById(section).scrollIntoView({
             behavior: 'smooth',

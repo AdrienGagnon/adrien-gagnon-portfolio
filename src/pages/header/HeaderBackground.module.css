@@ -5,33 +5,122 @@
     z-index: -1;
 }
 
-/* Arrow */
-
-.arrow {
+.lines {
     position: absolute;
-    top: -150%;
+    aspect-ratio: 1;
+    z-index: -1;
+}
+
+.lines:nth-child(1) {
+    position: absolute;
+    bottom: 0;
     left: 0;
+    height: 70%;
+    aspect-ratio: 1;
+    z-index: -1;
+}
+
+.lines:nth-child(2) {
     right: 0;
-    margin-inline: auto;
-    width: 80%;
-    transition: top 3s;
-    opacity: 0;
+    bottom: 0;
+    height: 70%;
 }
 
-.arrow path {
-    stroke: rgba(var(--color-orange), 0.5);
-    stroke-width: 1;
+.lines:nth-child(3) {
+    scale: 1.5 1;
+    height: 200px;
+    width: 1700px;
+    right: 0;
+    top: 0;
+}
+
+.top-right,
+#top-right-animation {
+    translate: 20%;
+    stroke-width: 0.6;
+}
+
+.lines path {
     fill: transparent;
-    filter: drop-shadow(0px 0.5px 0.5px rgb(0 0 0));
+    stroke: rgba(var(--color-red-soft), 0.5);
+    /* filter: drop-shadow(0px 0.5px 0.5px rgb(0 0 0)); */
 }
 
-.transition .arrow {
-    opacity: 1;
-    animation: arrowTransition 3s forwards 1s;
+#bottom-left-animation,
+#bottom-right-animation,
+#top-right-animation {
+    stroke: rgba(var(--color-orange), 0.5);
+    /* stroke: rgba(var(--color-red-soft), 0.8); */
+    z-index: 10;
 }
 
-@keyframes arrowTransition {
+#bottom-left-animation,
+#bottom-right-animation {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+}
+
+#top-right-animation {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+}
+
+#bottom-left-animation {
+    animation: dash-bottom-left 10s forwards infinite linear;
+}
+
+#bottom-right-animation {
+    animation: dash-bottom-right 10s forwards infinite linear;
+}
+
+#top-right-animation {
+    animation: dash-top-right 10s forwards infinite linear;
+}
+
+@keyframes dash-bottom-left {
+    from {
+        stroke-dashoffset: 400;
+    }
+    16% {
+        stroke-dashoffset: 0;
+    }
+    38% {
+        stroke-dashoffset: -400;
+    }
+    100% {
+        stroke-dashoffset: -400;
+    }
+}
+
+@keyframes dash-bottom-right {
+    from {
+        stroke-dashoffset: -400;
+    }
+    28% {
+        stroke-dashoffset: -400;
+    }
+    50% {
+        stroke-dashoffset: 0;
+    }
+    71% {
+        stroke-dashoffset: 400;
+    }
     to {
-        top: 100%;
+        stroke-dashoffset: 400;
+    }
+}
+
+@keyframes dash-top-right {
+    from {
+        stroke-dashoffset: -600;
+    }
+    61% {
+        stroke-dashoffset: -600;
+    }
+    83% {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: 600;
     }
 }

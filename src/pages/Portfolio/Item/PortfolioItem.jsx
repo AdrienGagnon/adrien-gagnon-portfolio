@@ -5,7 +5,7 @@ import styles from './PortfolioItem.module.css';
 
 import AccordionPanel from './AccordionPanel';
 
-function PortfolioItem({ project, layout }) {
+function PortfolioItem({ project, layout, transition }) {
     const accordionPanel = useRef();
 
     useEffect(() => {
@@ -27,6 +27,7 @@ function PortfolioItem({ project, layout }) {
                             alt={image.alt}
                             number={index + 1}
                             ariaExpanded={index + 1 === 1 ? true : false}
+                            transition={transition}
                         />
                     );
                 })}
