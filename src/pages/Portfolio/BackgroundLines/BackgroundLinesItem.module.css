@@ -72,3 +72,29 @@
         stroke-dashoffset: -700;
     }
 }
+
+.middle {
+    right: 20%;
+    top: 30%;
+    height: 700px;
+}
+
+.middle path:nth-of-type(2) {
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 700;
+    }
+    16% {
+        stroke-dashoffset: 0;
+    }
+    38% {
+        stroke-dashoffset: -700;
+    }
+    to {
+        stroke-dashoffset: -700;
+    }
+}

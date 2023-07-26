@@ -8,6 +8,7 @@
         ((var(--_panel-padding) * 2) + var(--_button-size)) / 2
     );
     outline: 2px solid rgb(var(--color-orange));
+    filter: drop-shadow(2px 2px 2px black);
 
     opacity: 0;
     transform: translate(10rem);
@@ -108,7 +109,7 @@
 
 .accordion-icon {
     fill: var(--_panel-color);
-    background: hsl(0 0% 0%);
+    background: rgb(var(--color-red-soft));
     width: var(--_button-size);
     aspect-ratio: 1 / 1;
     padding: 0.3rem;

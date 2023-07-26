@@ -37,20 +37,20 @@
 .top-right,
 #top-right-animation {
     translate: 20%;
-    stroke-width: 0.6;
+    stroke-width: 0.8;
 }
 
 .lines path {
     fill: transparent;
     stroke: rgba(var(--color-red-soft), 0.5);
-    /* filter: drop-shadow(0px 0.5px 0.5px rgb(0 0 0)); */
 }
 
 #bottom-left-animation,
 #bottom-right-animation,
 #top-right-animation {
+    filter: drop-shadow(0px 0px 1px rgba(var(--color-orange), 0.8))
+        drop-shadow(0px 0px 1px rgba(var(--color-orange), 0.5));
     stroke: rgba(var(--color-orange), 0.5);
-    /* stroke: rgba(var(--color-red-soft), 0.8); */
     z-index: 10;
 }
 

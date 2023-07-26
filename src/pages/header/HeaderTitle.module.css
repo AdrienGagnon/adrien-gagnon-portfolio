@@ -20,7 +20,7 @@
     height: 30rem;
     aspect-ratio: 1;
     border-radius: 100%;
-    border: 3px rgb(var(--color-red-soft)) solid;
+    border: 2px rgb(var(--color-orange)) solid;
     float: right;
     filter: drop-shadow(0px 0px 20px black);
 }
