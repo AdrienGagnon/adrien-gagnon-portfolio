@@ -97,6 +97,15 @@
     height: 100%;
 }
 
+.accordion-content .accordion-image:nth-child(1) {
+    filter: blur(2px);
+}
+
+.accordion-image:nth-child(2) {
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+}
+
 .accordion-trigger {
     display: flex;
     align-items: center;

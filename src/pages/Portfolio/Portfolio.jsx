@@ -2,28 +2,16 @@ import { useRef, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import styles from './Portfolio.module.css';
+import { projectList } from '../../constants/constants';
 
 import { intersectionObserver } from '../utils/intersectionObserver';
 import PortfolioItem from './Item/PortfolioItem';
 import SectionTitle from '../components/Title/SectionTitle';
 import PortfolioDescription from './Description/PortfolioDescription';
 import BtnLink from '../components/Buttons/BtnLink';
-
-import playlistLogin from './assets/playlist-login.png';
-import playlistHome from './assets/playlist-home.png';
-import playlistPlaylistView from './assets/playlist-playlistView.png';
-import playlistSectionView from './assets/playlist-sectionView.png';
-
-import natoursAllTours from './assets/natours-all-tours.png';
-import natoursTour from './assets/natours-tour.png';
-import natoursTourReviews from './assets/natours-tour-reviews.png';
-import natoursProfile from './assets/natours-profile.png';
-
-import adrienMenu from './assets/adrien-menu.png';
-import adrienCompetences from './assets/adrien-competences.png';
-import adrienPhotos from './assets/adrien-photos.png';
-import adrienQuiz from './assets/adrien-quiz.png';
 import BackgroundLinesItem1 from './BackgroundLines/BackgroundLinesItem1';
+import BackgroundLinesItem2 from './BackgroundLines/BackgroundLinesItem2';
+import BackgroundLinesItem3 from './BackgroundLines/BackgroundLinesItem3';
 
 function Portfolio() {
     const [active, setActive] = useState({
@@ -70,84 +58,6 @@ function Portfolio() {
             });
     }, [activeSection]);
 
-    const projectList = [
-        {
-            title: 'Natours',
-            images: [
-                { image: natoursAllTours, alt: 'natours-all-tours' },
-                { image: natoursTour, alt: 'natours-tour' },
-                { image: natoursTourReviews, alt: 'natours-tour-reviews' },
-                { image: natoursProfile, alt: 'natours-profile' },
-            ],
-            description_fr:
-                'Natours permet de se renseigner sur divers visite organisées à travers le monde. En se connectant à votre compte personnel, vous pouvez acheter des visites grâce à Stripe et rédiger des avis sur les visites auxquelles vous avez participé.',
-            description_en:
-                'Natours allows you to find out about various tours organized around the world. By logging in to your personal account, you can buy tours through Stripe and write reviews on the tours you have taken.',
-            note_fr:
-                "L'établissement de la connexion avec la base de données peut prendre jusqu'à 1 minute.",
-            note_en:
-                'It may take up to 1 minute to initiate the connection with the database.',
-            link: 'https://natours-y70o.onrender.com',
-            tools: [
-                'Node.js',
-                'MongoDB',
-                'Express',
-                'Pug',
-                'CSS',
-                'Stripe',
-                'Render',
-            ],
-        },
-        {
-            title: 'Playlist Manager',
-            images: [
-                { image: playlistLogin, alt: 'playlist-login' },
-                { image: playlistHome, alt: 'playlist-home' },
-                { image: playlistPlaylistView, alt: 'playlist-playlistView' },
-                { image: playlistSectionView, alt: 'playlist-sectionView' },
-            ],
-            description_fr:
-                "Cette application permet de chercher et faire jouer vos chansons favorites via l'API de Spotify. Vous pouvez vous connectez à votre compte personnel et accéder à vos propres playlist enregistrées.",
-            description_en:
-                'This application allows you to search and play your favorite songs via the Spotify API. You can log in to your personal account and access your own saved playlists.',
-            note_fr: "Project Manager n'est pas encore terminé.",
-            note_en: 'Project Manager is not feature complete.',
-            link: 'https://playlist-manager-ag.netlify.app',
-            tools: [
-                'React',
-                'JavaScript',
-                'HTML',
-                'CSS',
-                'Redux',
-                'SpotifyAPI',
-                'Netlify',
-            ],
-        },
-        {
-            title: 'Personal Website',
-            images: [
-                { image: adrienMenu, alt: 'adrien-menu' },
-                { image: adrienCompetences, alt: 'adrien-competences' },
-                { image: adrienPhotos, alt: 'adrien-photos' },
-                { image: adrienQuiz, alt: 'adrien-quiz' },
-            ],
-            description_fr:
-                "Ce site personnel m'a permis d'expérimenter avec différents outils tout en permettant de me présenter et de partager mes intérêts. Il comprend une section sur mes compétences, une section d'album photos prises par moi et une section quiz sur le monde!",
-            description_en:
-                'This personal site allowed me to experiment with different tools while serving as a presentation site for myself and my interests. It includes a section about my skills, a photo album section of pictures taken by me and a quiz section about the world!',
-            link: 'https://adriengagnon.netlify.app',
-            tools: [
-                'React',
-                'JavaScript',
-                'HTML',
-                'CSS',
-                'Redux',
-                'Three.js',
-                'Netlify',
-            ],
-        },
-    ];
-
     return (
         <div className={styles['portfolio-container']}>
             <div ref={portfolio1Ref} id="portfolio-item-1">
@@ -177,6 +87,7 @@ function Portfolio() {
                 className={styles['portfolio-item-container']}
                 id="portfolio-item-2"
             >
+                <BackgroundLinesItem2 />
                 <div className={styles['item-wrapper']}>
                     <PortfolioDescription
                         project={projectList[1]}
@@ -195,6 +106,7 @@ function Portfolio() {
                 className={styles['portfolio-item-container']}
                 id="portfolio-item-3"
             >
+                <BackgroundLinesItem3 />
                 <div className={styles['item-wrapper']}>
                     <PortfolioItem
                         project={projectList[2]}

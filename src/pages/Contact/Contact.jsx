@@ -7,6 +7,7 @@ import BtnLink from '../components/Buttons/BtnLink';
 import SectionTitle from '../components/Title/SectionTitle';
 import styles from './Contact.module.css';
 import ToTop from '../components/Buttons/ToTop';
+import BackgroundLinesContact from '../Portfolio/BackgroundLines/BackgroundLinesContact';
 
 function Contact() {
     const [active, setActive] = useState(false);
@@ -77,6 +78,7 @@ function Contact() {
             ].join(' ')}
             id="contact"
         >
+            <BackgroundLinesContact />
             <SectionTitle
                 titleFr={'Me contacter'}
                 titleEn={'Contact me'}

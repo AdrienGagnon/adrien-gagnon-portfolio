@@ -1,6 +1,22 @@
+import { useEffect } from 'react';
 import styles from './AccordionPanel.module.css';
+import { lazyLoading } from '../../utils/lazyLoading';
+import { useRef } from 'react';
 
-function AccordionPanel({ image, alt, number, ariaExpanded, transition }) {
+function AccordionPanel({
+    image,
+    imageSmall,
+    alt,
+    number,
+    ariaExpanded,
+    transition,
+}) {
+    const imgRef = useRef();
+
+    useEffect(() => {
+        lazyLoading(imgRef.current);
+    }, []);
+
     return (
         <div
             className={[
@@ -15,12 +31,6 @@ function AccordionPanel({ image, alt, number, ariaExpanded, transition }) {
                     aria-controls={`panel${number}-content`}
                     aria-expanded={ariaExpanded}
                 >
-                    {/* <span
-                        className={styles['accordion-title']}
-                        id={`panel${number}-title`}
-                    >
-                        Boating
-                    </span> */}
                     <div
                         aria-hidden="true"
                         className={styles['accordion-icon']}
@@ -42,8 +52,15 @@ function AccordionPanel({ image, alt, number, ariaExpanded, transition }) {
             >
                 <img
                     className={styles['accordion-image']}
+                    src={imageSmall}
+                    alt={`${alt}`}
+                />
+                <img
+                    ref={imgRef}
+                    className={styles['accordion-image']}
                     src={image}
                     alt={`${alt}`}
+                    loading="lazy"
                 />
             </div>
         </div>

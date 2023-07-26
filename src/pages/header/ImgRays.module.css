@@ -64,103 +64,103 @@
     }
 }
 
-path:nth-of-type(2),
-path:nth-of-type(4),
-path:nth-of-type(6),
-path:nth-of-type(8),
-path:nth-of-type(10),
-path:nth-of-type(12),
-path:nth-of-type(14),
-path:nth-of-type(16),
-path:nth-of-type(18),
-path:nth-of-type(20),
-path:nth-of-type(22),
-path:nth-of-type(24),
-path:nth-of-type(26),
-path:nth-of-type(28) {
+.rays-container path:nth-of-type(2),
+.rays-container path:nth-of-type(4),
+.rays-container path:nth-of-type(6),
+.rays-container path:nth-of-type(8),
+.rays-container path:nth-of-type(10),
+.rays-container path:nth-of-type(12),
+.rays-container path:nth-of-type(14),
+.rays-container path:nth-of-type(16),
+.rays-container path:nth-of-type(18),
+.rays-container path:nth-of-type(20),
+.rays-container path:nth-of-type(22),
+.rays-container path:nth-of-type(24),
+.rays-container path:nth-of-type(26),
+.rays-container path:nth-of-type(28) {
     --stroke-dashoffset: -80;
 }
-path:nth-of-type(1) {
+.rays-container path:nth-of-type(1) {
     --dash-delay: 800ms;
 }
-path:nth-of-type(2) {
+.rays-container path:nth-of-type(2) {
     --dash-delay: 850ms;
 }
-path:nth-of-type(3) {
+.rays-container path:nth-of-type(3) {
     --dash-delay: 900ms;
 }
-path:nth-of-type(4) {
+.rays-container path:nth-of-type(4) {
     --dash-delay: 950ms;
 }
-path:nth-of-type(5) {
+.rays-container path:nth-of-type(5) {
     --dash-delay: 1000ms;
 }
-path:nth-of-type(6) {
+.rays-container path:nth-of-type(6) {
     --dash-delay: 1050ms;
 }
-path:nth-of-type(7) {
+.rays-container path:nth-of-type(7) {
     --dash-delay: 1100ms;
 }
-path:nth-of-type(8) {
+.rays-container path:nth-of-type(8) {
     --dash-delay: 1150ms;
 }
-path:nth-of-type(9) {
+.rays-container path:nth-of-type(9) {
     --dash-delay: 1200ms;
 }
-path:nth-of-type(10) {
+.rays-container path:nth-of-type(10) {
     --dash-delay: 1250ms;
 }
-path:nth-of-type(11) {
+.rays-container path:nth-of-type(11) {
     --dash-delay: 1300ms;
 }
-path:nth-of-type(12) {
+.rays-container path:nth-of-type(12) {
     --dash-delay: 1350ms;
 }
-path:nth-of-type(13) {
+.rays-container path:nth-of-type(13) {
     --dash-delay: 1400ms;
 }
-path:nth-of-type(14) {
+.rays-container path:nth-of-type(14) {
     --dash-delay: 1450ms;
 }
-path:nth-of-type(15) {
+.rays-container path:nth-of-type(15) {
     --dash-delay: 1500ms;
 }
-path:nth-of-type(16) {
+.rays-container path:nth-of-type(16) {
     --dash-delay: 1550ms;
 }
-path:nth-of-type(17) {
+.rays-container path:nth-of-type(17) {
     --dash-delay: 1600ms;
 }
-path:nth-of-type(18) {
+.rays-container path:nth-of-type(18) {
     --dash-delay: 1650ms;
 }
-path:nth-of-type(19) {
+.rays-container path:nth-of-type(19) {
     --dash-delay: 1700ms;
 }
-path:nth-of-type(20) {
+.rays-container path:nth-of-type(20) {
     --dash-delay: 1750ms;
 }
-path:nth-of-type(21) {
+.rays-container path:nth-of-type(21) {
     --dash-delay: 1800ms;
 }
-path:nth-of-type(22) {
+.rays-container path:nth-of-type(22) {
     --dash-delay: 1850ms;
 }
-path:nth-of-type(23) {
+.rays-container path:nth-of-type(23) {
     --dash-delay: 1900ms;
 }
-path:nth-of-type(24) {
+.rays-container path:nth-of-type(24) {
     --dash-delay: 1950ms;
 }
-path:nth-of-type(25) {
+.rays-container path:nth-of-type(25) {
     --dash-delay: 2000ms;
 }
-path:nth-of-type(26) {
+.rays-container path:nth-of-type(26) {
     --dash-delay: 2050ms;
 }
-path:nth-of-type(27) {
+.rays-container path:nth-of-type(27) {
     --dash-delay: 2100ms;
 }
-path:nth-of-type(28) {
+.rays-container path:nth-of-type(28) {
     --dash-delay: 2150ms;
 }

@@ -24,6 +24,7 @@ function PortfolioItem({ project, layout, transition }) {
                         <AccordionPanel
                             key={image.image}
                             image={image.image}
+                            imageSmall={image.imageSmall}
                             alt={image.alt}
                             number={index + 1}
                             ariaExpanded={index + 1 === 1 ? true : false}

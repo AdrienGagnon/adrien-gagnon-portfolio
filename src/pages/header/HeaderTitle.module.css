@@ -25,6 +25,16 @@
     filter: drop-shadow(0px 0px 20px black);
 }
 
+.photo-finissant:nth-child(1) {
+    position: absolute;
+    filter: drop-shadow(0px 0px 20px black) blur(2px);
+}
+
+.photo-finissant:nth-child(2) {
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+}
+
 .header-name,
 .header-profession {
     text-align: left;
@@ -42,10 +52,6 @@
     text-shadow: 2px 2px black;
 }
 
-.anglais {
-    color: rgb(var(--color-grey));
-}
-
 .wrapper-photo {
     display: flex;
 }
@@ -61,7 +67,7 @@
 /* Animation on load */
 
 @media screen and (prefers-reduced-motion: no-preference) {
-    .photo-finissant {
+    .photo-container {
         opacity: 0;
         transform: translateX(-5rem);
     }
@@ -78,7 +84,7 @@
         --delay: 600ms;
     }
 
-    .photo-finissant,
+    .photo-container,
     .header-name,
     .header-profession {
         animation: fadeInStart 1s forwards;
