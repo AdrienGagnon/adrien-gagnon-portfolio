@@ -11,6 +11,7 @@
 }
 
 .contact-message {
+    z-index: 12;
     font-size: 2.4rem;
     max-width: 80rem;
     color: rgb(var(--color-orange));

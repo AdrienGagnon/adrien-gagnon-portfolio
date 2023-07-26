@@ -20,9 +20,11 @@ function Nav() {
                 headerTransition ? styles['transition'] : '',
             ].join(' ')}
         >
-            <a onClick={() => toSection('header')}>Menu</a>
-            <a onClick={() => toSection('portfolio-item-1')}>Portfolio</a>
-            <a onClick={() => toSection('contact')}>Contact</a>
+            <div className={styles.wrapper}>
+                <a onClick={() => toSection('header')}>Menu</a>
+                <a onClick={() => toSection('portfolio-item-1')}>Portfolio</a>
+                <a onClick={() => toSection('contact')}>Contact</a>
+            </div>
         </nav>
     );
 }

@@ -7,11 +7,26 @@
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
-    justify-content: center;
+    margin-inline: auto;
     margin-top: 2rem;
     z-index: 1;
+    display: flex;
+    justify-content: center;
     transition: all 300ms;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+@media screen and (max-width: 785px) {
+    .wrapper {
+        background-color: rgb(var(--color-red-soft));
+        padding: 1rem;
+        border-radius: 1.5rem;
+    }
 }
 
 .nav a {
@@ -40,7 +55,9 @@
     /* z-index: 100; */
 }
 
-.transition {
-    translate: 0 -5rem;
-    opacity: 0;
+@media screen and (min-width: 785px) {
+    .transition {
+        translate: 0 -5rem;
+        opacity: 0;
+    }
 }

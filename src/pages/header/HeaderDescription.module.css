@@ -14,8 +14,10 @@
     color: rgb(var(--color-white-text-both));
 }
 
-.transition .header-description-text {
-    opacity: 0;
+@media screen and (min-width: 785px) {
+    .transition .header-description-text {
+        opacity: 0;
+    }
 }
 
 .curly-braces {

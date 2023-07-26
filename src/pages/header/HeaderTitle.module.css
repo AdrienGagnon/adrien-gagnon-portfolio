@@ -103,14 +103,16 @@
     transition: translate 1s, opacity 1s;
 }
 
-.header-container.transition > :first-child {
-    translate: -200%;
-    opacity: 0;
-}
+@media screen and (min-width: 785px) {
+    .header-container.transition > :first-child {
+        translate: -200%;
+        opacity: 0;
+    }
 
-.header-container.transition .header-name-container {
-    translate: 100%;
-    opacity: 0;
+    .header-container.transition .header-name-container {
+        translate: 100%;
+        opacity: 0;
+    }
 }
 
 @media (max-width: 1420px) {

@@ -23,3 +23,9 @@
     background-color: rgb(var(--color-orange));
     border-radius: 1rem;
 }
+
+@media screen and (max-width: 600px) {
+    .tools-container {
+        font-size: 1.4rem;
+    }
+}

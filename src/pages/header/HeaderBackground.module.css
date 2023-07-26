@@ -124,3 +124,9 @@
         stroke-dashoffset: 600;
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .top-right {
+        display: none;
+    }
+}
