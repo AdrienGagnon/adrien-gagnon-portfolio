@@ -8,6 +8,7 @@ function ScrollIcon({ headerTransition }) {
                 headerTransition ? styles['transition'] : '',
             ].join(' ')}
             viewBox="0 0 50 50"
+            width={'70px'}
         >
             <g>
                 <path
