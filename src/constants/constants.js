@@ -163,7 +163,7 @@ export const projectList = [
             "Ce site personnel m'a permis d'expérimenter avec différents outils tout en permettant de me présenter et de partager mes intérêts. Il comprend une section sur mes compétences, une section d'album photos prises par moi et une section quiz sur le monde!",
         description_en:
             'This personal site allowed me to experiment with different tools while serving as a presentation site for myself and my interests. It includes a section about my skills, a photo album section of pictures taken by me and a quiz section about the world!',
-        link: 'https://adriengagnon.netlify.app',
+        link: 'https://adrien-gagnon.netlify.app',
         tools: [
             'React',
             'JavaScript',

@@ -27,6 +27,10 @@
         padding: 1rem;
         border-radius: 1.5rem;
     }
+
+    .nav {
+        z-index: 100;
+    }
 }
 
 .nav a {
