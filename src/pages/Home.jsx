@@ -13,18 +13,18 @@ import OptionsBtn from './UI/OptionsBtn';
 import { scrollEvents } from './utils/scrollEvents';
 
 function Home() {
-    const [mode, setMode] = useState('light');
+    const [mode, setMode] = useState('');
     const [isEventListener, setIsEventListener] = useState(false);
     useEffect(() => {
-        //         const githubAdress =
-        //             'https://github.com/AdrienGagnon/adrien-gagnon-portfolio.git';
-        //         const emailAdress = 'adrien.gagnon25@outlook.com';
-        //         console.log(message);
-        //         console.log(`\nHello there, adventurer! ⚓
-        // You want to know how this boat floats?
-        // If you think it's interesting and want to see the code behind it,
-        // you can check it out at ${githubAdress}.
-        // You can also contact me at ${emailAdress} for more info about this site, me or just to chitchat!`);
+        const githubAdress =
+            'https://github.com/AdrienGagnon/adrien-gagnon-portfolio.git';
+        const emailAdress = 'adrien.gagnon25@outlook.com';
+        console.log(message);
+        console.log(`\nHello there, adventurer! ⚓
+        You want to know how this boat floats?
+        If you think it's interesting and want to see the code behind it,
+        you can check it out at ${githubAdress}.
+        You can also contact me at ${emailAdress} for more info about this site, me or just to chitchat!`);
 
         const isDarkMode = () =>
             window.matchMedia &&
