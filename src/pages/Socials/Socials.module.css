@@ -1,5 +1,5 @@
 .social-container {
-    --height: 150px;
+    --height: 200px;
     position: fixed;
     height: var(--height);
     top: calc(50% - var(--height) / 2);

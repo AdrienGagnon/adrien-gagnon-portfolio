@@ -4,6 +4,7 @@ import styles from './Socials.module.css';
 import github from './assets/github.png';
 import linkedin from './assets/linkedin.png';
 import mail from './assets/mail.png';
+import iCodeThis from './assets/iCodeThis.jpg';
 import { handleClickLink } from './handleClickLink';
 
 function Socials() {
@@ -28,6 +29,12 @@ function Socials() {
             color: '#c71610',
             name: 'mail',
             mail: 'mailto: adrien.gagnon25@outlook.com',
+        },
+        {
+            logo: iCodeThis,
+            color: '#181028',
+            name: 'iCodeThis',
+            link: 'https://icodethis.com/Adrien_Gagnon',
         },
     ];
 
