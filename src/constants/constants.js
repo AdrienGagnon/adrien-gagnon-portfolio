@@ -93,6 +93,7 @@ export const projectList = [
             'Stripe',
             'Render',
         ],
+        githubLink: 'https://github.com/AdrienGagnon/Natours',
     },
     {
         title: 'Playlist Manager',
@@ -134,6 +135,7 @@ export const projectList = [
             'SpotifyAPI',
             'Netlify',
         ],
+        githubLink: 'https://github.com/AdrienGagnon/PlaylistManager',
     },
     {
         title: 'Personal Website',
@@ -173,5 +175,6 @@ export const projectList = [
             'Three.js',
             'Netlify',
         ],
+        githubLink: 'https://github.com/AdrienGagnon/mon-application',
     },
 ];

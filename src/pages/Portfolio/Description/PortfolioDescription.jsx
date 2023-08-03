@@ -33,7 +33,7 @@ function PortfolioDescription({ project, title, transition, layout }) {
             ) : (
                 <></>
             )}
-            <Tools tools={project.tools} />
+            <Tools tools={project.tools} githubLink={project.githubLink} />
             <span className={styles['btn-wrapper']}>
                 <BtnLink
                     link={project.link}

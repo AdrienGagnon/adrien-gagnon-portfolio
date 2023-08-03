@@ -8,11 +8,33 @@
     max-width: 100%;
 }
 
-.tool--name {
+.tool--name,
+.wrapper {
     position: relative;
 }
 
-.tool--name::before {
+.github-link {
+    position: absolute;
+    left: 0;
+}
+
+.github-link svg {
+    width: 30px;
+    height: 30px;
+    translate: 5 -5px;
+}
+
+.github-link:hover svg > g > path {
+    fill: black;
+}
+
+.github-link svg > g > path {
+    fill: rgb(68, 68, 68);
+    transition: all 300ms;
+}
+
+.tool--name::before,
+.wrapper::before {
     content: '';
     position: absolute;
     left: calc(-1.5px + -1 * var(--gap-tool) / 2);

@@ -97,6 +97,7 @@
     .portfolio-item-container,
     .portfolio-item-container-title {
         padding-inline: 2rem;
+        margin: 0;
     }
 
     .portfolio-container .item-wrapper h3 {
