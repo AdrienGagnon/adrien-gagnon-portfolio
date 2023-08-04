@@ -8,7 +8,6 @@ import { intersectionObserver } from '../utils/intersectionObserver';
 import PortfolioItem from './Item/PortfolioItem';
 import SectionTitle from '../components/Title/SectionTitle';
 import PortfolioDescription from './Description/PortfolioDescription';
-import BtnLink from '../components/Buttons/BtnLink';
 import BackgroundLinesItem1 from './BackgroundLines/BackgroundLinesItem1';
 import BackgroundLinesItem2 from './BackgroundLines/BackgroundLinesItem2';
 import BackgroundLinesItem3 from './BackgroundLines/BackgroundLinesItem3';
@@ -18,6 +17,7 @@ function Portfolio() {
         item1: false,
         item2: false,
         item3: false,
+        item4: false,
     });
     const langage = useSelector(state => {
         return state.langage.langage;
@@ -29,11 +29,13 @@ function Portfolio() {
     const portfolio1Ref = useRef();
     const portfolio2Ref = useRef();
     const portfolio3Ref = useRef();
+    const portfolio4Ref = useRef();
 
     useEffect(() => {
         intersectionObserver(portfolio1Ref.current);
         intersectionObserver(portfolio2Ref.current);
         intersectionObserver(portfolio3Ref.current);
+        intersectionObserver(portfolio4Ref.current);
     }, []);
 
     useEffect(() => {
@@ -55,6 +57,12 @@ function Portfolio() {
             setActive({
                 ...active,
                 item3: true,
+            });
+        activeSection === 'portfolio-item-4' &&
+            !active.item4 &&
+            setActive({
+                ...active,
+                item4: true,
             });
     }, [activeSection]);
 
@@ -116,12 +124,31 @@ function Portfolio() {
                     <PortfolioDescription
                         project={projectList[2]}
                         layout={'normal'}
+                        transition={active.item3}
+                    />
+                </div>
+            </div>
+            <div
+                ref={portfolio4Ref}
+                className={styles['portfolio-item-container']}
+                id="portfolio-item-4"
+            >
+                <BackgroundLinesItem3 />
+                <div className={styles['item-wrapper']}>
+                    <PortfolioDescription
+                        project={projectList[3]}
+                        layout={'inverse'}
                         title={
                             langage === 'fr'
                                 ? 'Site personnel'
                                 : 'Personel Website'
                         }
-                        transition={active.item3}
+                        transition={active.item4}
+                    />
+                    <PortfolioItem
+                        project={projectList[3]}
+                        layout={'inverse'}
+                        transition={active.item4}
                     />
                 </div>
             </div>

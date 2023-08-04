@@ -38,11 +38,11 @@ function SectionSelector() {
                                 strokeWidth="3"
                             />
                         </svg>
-                        {index !== 4 && (
+                        {index !== sections.length - 1 && (
                             <div
                                 className={[
                                     styles.courbe,
-                                    [1, 3].includes(index) && styles.right,
+                                    [1, 3, 5].includes(index) && styles.right,
                                 ].join(' ')}
                             ></div>
                         )}

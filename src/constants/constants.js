@@ -8,6 +8,11 @@ import natoursTour from '../assets/natours-tour.png';
 import natoursTourReviews from '../assets/natours-tour-reviews.png';
 import natoursProfile from '../assets/natours-profile.png';
 
+import icodethis1 from '../assets/icodethis-1.png';
+import icodethis2 from '../assets/icodethis-2.png';
+import icodethis3 from '../assets/icodethis-3.png';
+import icodethis4 from '../assets/icodethis-4.png';
+
 import adrienMenu from '../assets/adrien-menu.png';
 import adrienCompetences from '../assets/adrien-competences.png';
 import adrienPhotos from '../assets/adrien-photos.png';
@@ -22,6 +27,11 @@ import natoursAllToursSmall from '../assets/natours-all-tours-small.png';
 import natoursTourSmall from '../assets/natours-tour-small.png';
 import natoursTourReviewsSmall from '../assets/natours-tour-reviews-small.png';
 import natoursProfileSmall from '../assets/natours-profile-small.png';
+
+import icodethis1Small from '../assets/icodethis-1-small.png';
+import icodethis2Small from '../assets/icodethis-2-small.png';
+import icodethis3Small from '../assets/icodethis-3-small.png';
+import icodethis4Small from '../assets/icodethis-4-small.png';
 
 import adrienMenuSmall from '../assets/adrien-menu-small.png';
 import adrienCompetencesSmall from '../assets/adrien-competences-small.png';
@@ -47,6 +57,7 @@ export const sections = [
     'portfolio-item-1',
     'portfolio-item-2',
     'portfolio-item-3',
+    'portfolio-item-4',
     'contact',
 ];
 
@@ -136,6 +147,37 @@ export const projectList = [
             'Netlify',
         ],
         githubLink: 'https://github.com/AdrienGagnon/PlaylistManager',
+    },
+    {
+        title: 'iCodeThis',
+        images: [
+            {
+                image: icodethis3,
+                imageSmall: icodethis3Small,
+                alt: 'icodethis3',
+            },
+            {
+                image: icodethis4,
+                imageSmall: icodethis4Small,
+                alt: 'icodethis2',
+            },
+            {
+                image: icodethis1,
+                imageSmall: icodethis1Small,
+                alt: 'icodethis1',
+            },
+            {
+                image: icodethis2,
+                imageSmall: icodethis2Small,
+                alt: 'icodethis4',
+            },
+        ],
+        description_fr:
+            "iCodeThis présente des défis de conception quotidiens en utilisant HTML, CSS et JavaScript. Il permet de s'entrainer à créer efficacement des designs modernes et de résoudre des problèmes réels. Vous pouvez voir mes créations quotidiennes sur ce site, témoignant de mon assiduité et de mes compétences en développement web.",
+        description_en:
+            'iCodeThis presents everyday design challenges using HTML, CSS, and JavaScript. It allows to practice creating modern designs and solving real problems. You can see my daily creations on this site, testifying to my diligence and my skills in web development.',
+        link: 'https://icodethis.com/Adrien_Gagnon',
+        tools: ['HTML', 'CSS', 'JavaScript', 'FontAwesome'],
     },
     {
         title: 'Personal Website',
