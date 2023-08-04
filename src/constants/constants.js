@@ -175,7 +175,7 @@ export const projectList = [
         description_fr:
             "iCodeThis présente des défis de conception quotidiens en utilisant HTML, CSS et JavaScript. Il permet de s'entrainer à créer efficacement des designs modernes et de résoudre des problèmes réels. Vous pouvez voir mes créations quotidiennes sur ce site, témoignant de mon assiduité et de mes compétences en développement web.",
         description_en:
-            'iCodeThis presents everyday design challenges using HTML, CSS, and JavaScript. It allows to practice creating modern designs and solving real problems. You can see my daily creations on this site, testifying to my diligence and my skills in web development.',
+            'iCodeThis presents everyday design challenges using HTML, CSS, and JavaScript. It allows to practice creating modern designs and to solve real problems. You can see my daily creations on this site, testifying to my diligence and my skills in web development.',
         link: 'https://icodethis.com/Adrien_Gagnon',
         tools: ['HTML', 'CSS', 'JavaScript', 'FontAwesome'],
     },
