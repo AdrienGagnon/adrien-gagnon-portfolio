@@ -152,16 +152,6 @@ export const projectList = [
         title: 'iCodeThis',
         images: [
             {
-                image: icodethis3,
-                imageSmall: icodethis3Small,
-                alt: 'icodethis3',
-            },
-            {
-                image: icodethis4,
-                imageSmall: icodethis4Small,
-                alt: 'icodethis2',
-            },
-            {
                 image: icodethis1,
                 imageSmall: icodethis1Small,
                 alt: 'icodethis1',
@@ -169,6 +159,16 @@ export const projectList = [
             {
                 image: icodethis2,
                 imageSmall: icodethis2Small,
+                alt: 'icodethis2',
+            },
+            {
+                image: icodethis3,
+                imageSmall: icodethis3Small,
+                alt: 'icodethis3',
+            },
+            {
+                image: icodethis4,
+                imageSmall: icodethis4Small,
                 alt: 'icodethis4',
             },
         ],
