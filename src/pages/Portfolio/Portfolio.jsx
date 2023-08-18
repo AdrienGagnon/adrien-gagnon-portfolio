@@ -133,7 +133,7 @@ function Portfolio() {
                 className={styles['portfolio-item-container']}
                 id="portfolio-item-4"
             >
-                <BackgroundLinesItem3 />
+                <BackgroundLinesItem2 />
                 <div className={styles['item-wrapper']}>
                     <PortfolioDescription
                         project={projectList[3]}

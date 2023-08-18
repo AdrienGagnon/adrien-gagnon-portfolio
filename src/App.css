@@ -20,9 +20,3 @@ body {
 main * {
     transition: background-color 300ms, color 300ms, fill 300ms;
 }
-
-@media screen and (min-width: 1000px) {
-    html {
-        overflow: hidden;
-    }
-}
