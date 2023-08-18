@@ -21,7 +21,11 @@ function Nav() {
             ].join(' ')}
         >
             <div className={styles.wrapper}>
-                <a onClick={() => toSection('header')}>Menu</a>
+                {window.innerWidth < 785 ? (
+                    <a onClick={() => toSection('header')}>Menu</a>
+                ) : (
+                    <></>
+                )}
                 <a onClick={() => toSection('portfolio-item-1')}>Portfolio</a>
                 <a onClick={() => toSection('contact')}>Contact</a>
             </div>

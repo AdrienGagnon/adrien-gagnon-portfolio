@@ -35,7 +35,12 @@
 }
 
 @media screen and (max-width: 1000px) {
+    .header {
+        padding-top: 5rem;
+    }
+
     .header-fixed {
         position: absolute;
+        /* margin-top: 10rem; */
     }
 }

@@ -68,14 +68,25 @@ function Socials() {
                 ].join(' ')}
             >
                 {socials.map(social => {
+                    if (social.mail) {
+                        return (
+                            <div
+                                onClick={() => handleClickLink(social)}
+                                key={social.name}
+                                style={{ background: social.color }}
+                            >
+                                <img src={social.logo} alt={social.name} />
+                            </div>
+                        );
+                    }
                     return (
-                        <div
-                            onClick={() => handleClickLink(social)}
+                        <a
+                            href={social.link}
                             key={social.name}
                             style={{ background: social.color }}
                         >
                             <img src={social.logo} alt={social.name} />
-                        </div>
+                        </a>
                     );
                 })}
                 <div className={styles.share}>
