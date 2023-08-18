@@ -27,13 +27,13 @@
         background-color: rgb(var(--color-red-soft));
         padding: 1rem;
         border-radius: 1.5rem;
+        gap: 2rem;
     }
 
     .nav {
-        position: static;
+        position: fixed;
         z-index: 100;
         padding-inline: 5rem 6rem;
-        background: rgb(var(--color-red-bright));
     }
 }
 
